@@ -1,0 +1,33 @@
+{
+  "captured": "2026-10-20T20:29:04+00:00",
+  "commit": "6bdb6ae",
+  "mcp_repo_commit": "6bdb6ae",
+  "database": "sx_ligands_merged_v14_flat.jsonl",
+  "assistant": {
+    "model": "🎁 Free models · nvidia/nemotron-3-ultra-550b-a55b:free",
+    "question": "What are the best ligands for separating Eu from La?",
+    "answer": "smart_toy\n\nBased on the REEL-QUEST database, here are the top 10 ligands for separating Eu from La, ranked by the absolute value of log separation factor (|log SF|):\n\nRank\tLigand\tFamily\tMedian log SF\tSeparation Factor (SF)\tPreference\tConditions\n1\tDBPhthA\tPhthalamic_acid\t4.30\t19,953\tEu\t1\n2\tCA-BTP\tMultident_N_donor\t2.95\t899\tEu\t1\n3\tDODGA\tDGA\t2.53\t337\tEu\t1\n4\tDODMDGA\tDGA\t2.45\t284\tEu\t1\n5\tDOdMAPTA\tDAPhen\t−2.45\t0.004\tLa\t2\n6\tDHTPhBLPhen\tBLPhen\t−2.41\t0.004\tLa\t2\n7\tPrODGA\tDGA\t2.37\t236\tEu\t1\n8\tDMDecODGA\tDGA\t2.36\t228\tEu\t1\n9\tDCPhenDA-EtHexPh\tDAPhen\t−2.35\t0.005\tLa\t1\n10\tEtODGA\tDGA\t2.23\t169\tEu\t1\nKey Observations\nEu-preferring ligands (positive log SF): Dominated by DGA-type extractants (DODGA, DODMDGA, PrODGA, DMDecODGA, EtODGA) plus the standout DBPhthA (phthalamic acid) and CA-BTP (multidentate N-donor).\nLa-preferring ligands (negative log SF): DAPhen and BLPhen phenanthroline derivatives (DOdMAPTA, DHTPhBLPhen, DCPhenDA-EtHexPh).\nDBPhthA is exceptional, showing a separation factor ~20,000× for Eu over La—far above the rest.\nThe DGA family provides the most numerous high-performing Eu-selective ligands, consistent with their known ascending (heavy-REE) selectivity trend.\n\nData from 105 ligands with paired Eu/La measurements; “Conditions” = number of paired experimental conditions averaged."
+  },
+  "mcp_call": {
+    "tool": "get_best_separators",
+    "arguments": {
+      "element1": "Eu",
+      "element2": "La",
+      "limit": 3
+    }
+  },
+  "browser": {
+    "captured": "2026-10-29T20:49:32+00:00",
+    "app_root_commit": "e98e9d7",
+    "exported_from": "5556453",
+    "exported_tree_clean": true,
+    "ligand": "TODGA"
+  },
+  "sf_viewer": {
+    "captured": "2026-10-30T18:31:56+00:00",
+    "app_root_commit": "e98e9d7",
+    "exported_from": "5556453",
+    "exported_tree_clean": true,
+    "pair": "Nd/Pr"
+  }
+}

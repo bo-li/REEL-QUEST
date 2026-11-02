@@ -1,0 +1,36 @@
+{
+  "version": "v0.1",
+  "last_updated": "2026-01-15",
+  "description": "Common acids used in rare earth solvent extraction",
+  "acids": {
+    "HNO3": {
+      "name": "Nitric acid",
+      "formula": "HNO3",
+      "pKa": -1.4,
+      "counterion": "NO3-",
+      "notes": "Most common acid in REE separation; forms extractable Ln(NO3)3 complexes"
+    },
+    "H2SO4": {
+      "name": "Sulfuric acid",
+      "formula": "H2SO4",
+      "pKa": -3.0,
+      "counterion": "SO4 2-",
+      "notes": "Used in some extraction systems; sulfate complexation can affect selectivity"
+    },
+    "HCl": {
+      "name": "Hydrochloric acid",
+      "formula": "HCl",
+      "pKa": -6.3,
+      "counterion": "Cl-",
+      "notes": "Less common for extraction; used primarily for stripping/back-extraction"
+    },
+    "HClO4": {
+      "name": "Perchloric acid",
+      "formula": "HClO4",
+      "pKa": -10.0,
+      "counterion": "ClO4-",
+      "notes": "Non-complexing acid; used to study pure solvation extraction"
+    }
+  },
+  "notes": "Acid concentration typically ranges from 0.1 to 8 M in REE extraction studies. Counterion choice significantly affects extraction mechanism and selectivity."
+}

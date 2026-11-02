@@ -1,0 +1,117 @@
+# Citation metadata for REEL-QUEST. GitHub renders this as "Cite this repository".
+# `doi` is the Zenodo record of v1.0.0 (reserved 2026-10-30); add ORCIDs when known.
+cff-version: 1.2.0
+message: >-
+  If you use REEL-QUEST, please cite it as below. Please also cite the
+  papers that reported any specific measurements you rely on (each
+  condition's reference.DOI).
+type: software
+title: >-
+  REEL-QUEST: A Digital Platform for Exploration of Rare-Earth Extraction
+  Ligands and Quantitative Understanding of Elemental Selectivity Trends
+abstract: >-
+  A curated, structure-keyed database of liquid-liquid extraction
+  distribution ratios for the lanthanides (La-Lu) plus Y and Sc, with
+  per-measurement provenance, a 21-subtype SMARTS taxonomy of extractants,
+  per-ligand selectivity-trend classification across the lanthanide series
+  with bootstrap confidence intervals, a Python API, a read-only REST API
+  and an interactive dashboard.
+authors:
+  - family-names: Li
+    given-names: Bo
+    affiliation: Vanderbilt University
+  - family-names: Jiang
+    given-names: De-en
+    affiliation: Vanderbilt University
+doi: 10.5281/zenodo.23819219
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23819219
+    description: Zenodo archive of REEL-QUEST v1.0.0
+version: 1.0.0
+date-released: 2026-10-30
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/bo-li/REEL-QUEST"
+keywords:
+  - rare earth elements
+  - lanthanides
+  - solvent extraction
+  - liquid-liquid extraction
+  - distribution ratio
+  - separation factor
+  - extractant
+  - ligand database
+  - cheminformatics
+references:
+  - type: article
+    title: Advancing Rare-Earth Separation by Machine Learning
+    authors:
+      - family-names: Liu
+        given-names: Tongyu
+      - family-names: Johnson
+        given-names: Katherine R.
+      - family-names: Jansone-Popova
+        given-names: Santa
+      - family-names: Jiang
+        given-names: De-en
+    journal: JACS Au
+    volume: 2
+    issue: 6
+    start: 1428
+    end: 1434
+    year: 2022
+    doi: 10.1021/jacsau.2c00122
+  - type: article
+    title: Creation of the Separation Archive for Elements (SAFE) Database
+    authors:
+      - family-names: Garcia Leite
+        given-names: Leonardo da
+      - family-names: Zhang
+        given-names: Baosen
+      - family-names: Acar
+        given-names: Zafer
+      - family-names: Elowitt
+        given-names: Jackson
+      - family-names: Augustine
+        given-names: Logan J.
+      - family-names: Clark
+        given-names: Aurora E.
+      - family-names: Karamalis
+        given-names: Victor
+      - family-names: Perez
+        given-names: Danny
+      - family-names: Schrier
+        given-names: Joshua
+      - family-names: Taylor
+        given-names: Michael
+      - family-names: Yang
+        given-names: Ping
+    journal: Solvent Extraction and Ion Exchange
+    volume: 43
+    issue: 7
+    start: 847
+    end: 852
+    year: 2025
+    doi: 10.1080/07366299.2025.2564381
+  - type: article
+    title: >-
+      Tetradentate Ligand's Chameleon-Like Behavior Offers Recognition of
+      Specific Lanthanides
+    authors:
+      - family-names: Pramanik
+        given-names: Subhamay
+      - name: "et al."
+    journal: Journal of the American Chemical Society
+    volume: 146
+    issue: 37
+    start: 25669
+    end: 25679
+    year: 2024
+    doi: 10.1021/jacs.4c07332
+  - type: database
+    title: "IDEaL: International Database for Extractant Ligands"
+    authors:
+      - name: OECD Nuclear Energy Agency
+    url: "https://www.oecd-nea.org/ideal/"

@@ -1,0 +1,88 @@
+{
+  "version": "v0.2",
+  "last_updated": "2026-03-20",
+  "description": "Mapping from Liu 2022 Structural_Class to CONTRIBUTING.md mechanism types",
+  "mechanism_mapping": {
+    "Diglycolamide (DGA)": {
+      "mechanism": "Solvation",
+      "extractant_type": "Diglycolamide",
+      "description": "Neutral solvating extractants, DGA family with diglycolamide core structure",
+      "typical_extractants": ["TODGA", "THDGA", "TEHDGA", "TBDGA", "TDDGA", "DMDODGA"],
+      "functional_groups": ["amide", "ether"],
+      "coordination_mode": "tridentate"
+    },
+    "Aromatic ligand": {
+      "mechanism": "Cation_Exchange",
+      "extractant_type": "Aromatic_Heterocycle",
+      "description": "Fallback for aromatic nitrogen heterocycles (BTP, BTBP). Requires SMARTS refinement via reclassify_extractant_types.py to distinguish Phenanthroline_Amide, Phenanthroline_Phosphonate, Pyridine_Bisamide, and Bipyridyl_Diamide subfamilies.",
+      "typical_extractants": ["CA-BTP", "CyMe4-BTBP", "BTP derivatives"],
+      "functional_groups": ["pyridine", "triazine"],
+      "coordination_mode": "bi-tridentate or tetradentate"
+    },
+    "Phosphine oxide": {
+      "mechanism": "Solvation",
+      "extractant_type": "Organophosphorus",
+      "description": "Neutral organophosphorus extractants with P=O functional groups (pure P-donors only; phen+P hybrids are Phenanthroline_Phosphonate)",
+      "typical_extractants": ["CMPO", "TRPO", "TBP", "TOPO"],
+      "functional_groups": ["phosphine oxide"],
+      "coordination_mode": "monodentate to tridentate"
+    },
+    "Other ligand": {
+      "mechanism": "Solvation",
+      "extractant_type": "Other",
+      "description": "Miscellaneous extractants not fitting standard structural classes",
+      "typical_extractants": ["Me-TODGA", "DMDOHEMA", "novel ligands"],
+      "functional_groups": ["varies"],
+      "coordination_mode": "varies"
+    },
+    "dipicolinamide": {
+      "mechanism": "Cation_Exchange",
+      "extractant_type": "Pyridine_Bisamide",
+      "description": "Pyridine-2,6-dicarboxamide ligands; tridentate NNN coordination; flat/mixed REE selectivity",
+      "typical_extractants": ["Et(m)TDPA", "Et(o)TDPA", "Et(p)TDPA", "DMDPhPDA"],
+      "functional_groups": ["pyridine", "amide"],
+      "coordination_mode": "tridentate"
+    },
+    "bis-triazinyl-phenanthroline": {
+      "mechanism": "Cation_Exchange",
+      "extractant_type": "Aromatic_Heterocycle",
+      "description": "BTPhen family: 1,10-phenanthroline fused with bis-triazinyl groups; tetradentate NNNN coordination",
+      "typical_extractants": ["CyMe4BTPhen"],
+      "functional_groups": ["phenanthroline", "triazine"],
+      "coordination_mode": "tetradentate"
+    },
+    "pyridine-bisphosphonate": {
+      "mechanism": "Cation_Exchange",
+      "extractant_type": "Pyridine_Bisphosphonate",
+      "description": "RESERVED for future ingestion. Pyridine-2,6-bisphosphonate ligands; tridentate NOP coordination; REVERSE REE selectivity (light REE preference). Complementary to Pyridine_Bisamide. Not yet present in v6 database.",
+      "typical_extractants": [],
+      "functional_groups": ["pyridine", "phosphonate"],
+      "coordination_mode": "tridentate"
+    }
+  },
+  "canonical_mechanisms": [
+    "Cation_Exchange",
+    "Solvation",
+    "Anion_Exchange",
+    "Ion_Pair",
+    "Supramolecular",
+    "Hybrid"
+  ],
+  "canonical_extractant_types": [
+    "Diglycolamide",
+    "Phenanthroline_Amide",
+    "Phenanthroline_Phosphonate",
+    "Pyridine_Bisamide",
+    "Pyridine_Bisphosphonate",
+    "Bipyridyl_Diamide",
+    "Organophosphorus",
+    "Aromatic_Heterocycle",
+    "Malonamide",
+    "Amide",
+    "Crown_Ether",
+    "Carboxylic_Acid",
+    "Other",
+    "Unknown"
+  ],
+  "notes": "v0.2: Added 4 new extractant types (Phenanthroline_Amide, Phenanthroline_Phosphonate, Pyridine_Bisamide, Bipyridyl_Diamide) to distinguish aromatic scaffold subfamilies per paper taxonomy. Pyridine_Bisphosphonate reserved for future ingestion. Mechanisms defined per CONTRIBUTING.md."
+}

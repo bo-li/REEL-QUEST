@@ -1,0 +1,68 @@
+name: Contributions
+
+# The check every data pull request gets: each changed file under contributions/
+# is validated against the released database (scripts/check_contribution.py),
+# and the report is the job summary. Nothing is applied here; a maintainer
+# applies a reviewed file with scripts/apply_contributions.py.
+
+on:
+  pull_request:
+    paths:
+      - "contributions/**"
+      - "rel_quest/contributions.py"
+      - "scripts/check_contribution.py"
+      - "scripts/apply_contributions.py"
+      - "schema/contribution.schema.json"
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: Check contribution files
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e . --no-deps
+
+      - name: Contribution files changed by this pull request
+        id: changed
+        run: |
+          if [ -n "${{ github.base_ref }}" ]; then
+            git diff --name-only --diff-filter=AMR "origin/${{ github.base_ref }}...HEAD" -- ':(glob)contributions/*.json' > changed.txt
+          else
+            : > changed.txt
+          fi
+          echo "n=$(grep -c . changed.txt || true)" >> "$GITHUB_OUTPUT"
+          cat changed.txt
+
+      - name: Check the changed files (or every pending file)
+        # The report of each file goes to the job summary (--summary) and to the artifact below.
+        run: |
+          if [ "${{ steps.changed.outputs.n }}" != "0" ]; then
+            xargs -a changed.txt python scripts/check_contribution.py --summary
+          else
+            python scripts/check_contribution.py --summary
+          fi
+
+      - name: Schema on disk is current
+        run: python scripts/generate_json_schema.py --check
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: contribution-check-reports
+          path: outputs/contributions/*_check.md
+          if-no-files-found: ignore

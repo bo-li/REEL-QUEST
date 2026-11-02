@@ -1,0 +1,16 @@
+[theme]
+primaryColor = "#1f77b4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#262730"
+font = "sans serif"
+
+[server]
+maxUploadSize = 200
+# XSRF protection pins allowable origins, which requires CORS to stay on;
+# setting enableCORS = false here only made Streamlit override it and warn
+# on every boot.
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false

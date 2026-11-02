@@ -1,0 +1,84 @@
+path,type,required,units,provenance,description
+schema_version,,yes,,,Record-shape version
+ligand,object,yes,,,"Identity, structure, names and classification of the extractant"
+ligand.Name,string,yes,,curated,Curated short name; unique across the database
+ligand.SMILES,string,yes,,curated,RDKit-canonical SMILES; the primary key (no duplicates)
+ligand.InChI,string,no,,derived at ingest (RDKit),Standard InChI
+ligand.InChI_Key,string,no,,derived at ingest (RDKit),Standard InChIKey
+ligand.IUPAC_Name,string|null,no,,curated,IUPAC name
+ligand.CAS_Number,string|null,no,,curated,CAS Registry Number
+ligand.PubChem_CID,integer|null,no,,curated,PubChem compound ID
+ligand.Molecular_Formula,string,no,,derived at ingest (RDKit),Hill formula
+ligand.Molecular_Weight,number|null,no,g mol-1,derived at ingest (RDKit),Average molecular weight
+ligand.Mechanism,string,yes,,curated,Extraction mechanism (vocab/mechanisms.json)
+ligand.Subtype,string,yes,,curated,"Chemical subtype, 21-value flat taxonomy (vocab/chemical_families.json)"
+ligand.Chemical_Family,string,yes,,curated,Same label as Subtype (kept for compatibility)
+ligand.Extractant_Type,string,yes,,curated,Legacy SMARTS class; prefer Subtype
+ligand.Alternative_Names,array,yes,,curated,Genuine synonyms only
+ligand.Community_Name,string,no,,curated,"Informal family nickname; uncurated, not for analysis"
+selectivity,object,yes,,,"Selectivity trend across the lanthanide series, fitted from the record's own conditions"
+selectivity.trend_classification,string,yes,,derived: trends.classify_selectivity_trend,Selectivity trend across La-Lu (see docs/DATABASE_STRUCTURE.md)
+selectivity.trend_confidence,string,yes,,derived: trends.classify_selectivity_trend,"Agreement of per-condition votes: High (unanimous), Medium (>70 %), Low; 'None' for Insufficient_Data"
+selectivity.element_coverage,array,yes,,derived: trends.classify_selectivity_trend,La-Lu elements the trend fit used (never Y/Sc)
+selectivity.slope,number|null,yes,dex per unit Z,derived: trends.classify_selectivity_trend,Mean of per-condition slopes of log D vs atomic number
+selectivity.r_squared,number|null,yes,dimensionless,derived: trends.classify_selectivity_trend,Mean per-condition R^2 of that fit
+selectivity.notes,string,yes,,derived: trends.classify_selectivity_trend,Plain-language basis of the classification
+selectivity.peak_element,string,no,,derived: trends.classify_selectivity_trend,Position of the extremum for Peaked / U_Shaped
+selectivity.slope_CI_lower,number|null,yes,dex per unit Z,derived: uncertainty.bootstrap_trend_ci (seeded),Lower bound of the 95 % two-stage bootstrap interval of `slope`
+selectivity.slope_CI_upper,number|null,yes,dex per unit Z,derived: uncertainty.bootstrap_trend_ci (seeded),Upper bound of that interval
+selectivity.slope_std,number|null,yes,dex per unit Z,derived: uncertainty.bootstrap_trend_ci (seeded),Bootstrap standard deviation of `slope`
+experimental_data,array,yes,,,Experimental conditions
+experimental_data[].condition_id,string,yes,,curated,"Unique, stable condition identifier"
+experimental_data[].Acid_Name,string|null,no,,source-transcribed,Aqueous acid (mostly HNO3; 'Hcl' is hydrochloric acid as spelled in the source)
+experimental_data[].Acid_Concentration_M,number|null,no,mol L-1,source-transcribed,Initial aqueous acid concentration
+experimental_data[].Temperature_C,number,no,degC,source-transcribed,Temperature
+experimental_data[].Solvent_Name,string,no,,source-transcribed,Organic diluent
+experimental_data[].Solvent_Ratio,string|null,no,,source-transcribed,"Volume ratio for mixed diluents, e.g. '7:3'"
+experimental_data[].Extractant_Concentration_M,number|null,no,mol L-1,source-transcribed,Extractant concentration in the organic phase
+experimental_data[].Phase_Modifier_Name,string,no,,source-transcribed,Organic phase modifier (empty string if none)
+experimental_data[].Phase_Modifier_Concentration_M,number|null,no,mol L-1,source-transcribed,Phase modifier concentration
+experimental_data[].Contact_Time,string,no,,source-transcribed,"Contact/equilibration time with unit, e.g. '60 min'"
+experimental_data[].Additives,string,no,,source-transcribed,"Other aqueous components, free text"
+experimental_data[].Co_Extractants,array|null,no,,,Other extractants in the organic phase (a mixed solvent). The D belongs to the mixture: the condition stays on the main ligand's record but is left out of everything pooled across conditions (uncertainty.is_mixture)
+experimental_data[].Co_Extractants[].Name,string,yes,,source-transcribed,Co-extractant name
+experimental_data[].Co_Extractants[].SMILES,string|null,no,,source-transcribed,Co-extractant structure
+experimental_data[].Co_Extractants[].Concentration_M,number|null,no,mol L-1,source-transcribed,Co-extractant concentration in the organic phase
+experimental_data[].distribution_ratios,object,yes,,,D-values keyed by element symbol
+experimental_data[].distribution_ratios.<element>.value,number|null,yes,dimensionless,source-transcribed,"Distribution ratio D = [M]org/[M]aq, 6 significant figures (null only where the source gave no usable value)"
+experimental_data[].distribution_ratios.<element>.log_value,number|null,yes,log10,source-transcribed,log10(D) as reported or digitised; agrees with `value` within 0.01 dex (validators.check_d_value_consistency)
+experimental_data[].distribution_ratios.<element>.n_replicates,integer,yes,,source-transcribed,Number of source values behind this cell
+experimental_data[].distribution_ratios.<element>.sigma_log_D,number,yes,dex,"derived: uncertainty.classify_measurement_quality + compute_sigma_log_d, unless sigma_source is 'measured' (source data)","Uncertainty of log D (1 sigma). When `sigma_source` is 'measured', computed for this value (e.g. from the figure's marker size and axis scale); otherwise a prior by source type (uncertainty.SIGMA_PRIORS: 0.0715 dex for figure-digitised, the median reading uncertainty of the calibrated figures; 3.5 % relative, 0.0152 dex, for tabulated)"
+experimental_data[].distribution_ratios.<element>.sigma_source,string,no,,source-transcribed,"Where sigma_log_D comes from: 'prior' by source type, or 'measured' for this value; absent means 'prior'"
+experimental_data[].distribution_ratios.<element>.value_origin,string,no,,source-transcribed,"How the value was obtained: 'reported' (a table or the text), 'digitised' (read off a figure marker), 'interpolated' (read off a fitted line or between points, or at an inferred condition), 'derived' (computed from other quantities), 'censored' (only a bound is known; see `censor`). Absent means reported or digitised, per source_quality"
+experimental_data[].distribution_ratios.<element>.censor,string|null,no,,source-transcribed,"For a censored value, the direction of the bound: '>' (D exceeds `value`) or '<' (D is below it); `value`/`log_value` hold the bound. Censored cells are left out of trend fits, statistics and separation factors"
+experimental_data[].distribution_ratios.<element>.source_quality,string,yes,,derived: uncertainty.classify_measurement_quality,Whether the value was read from a figure or a table
+experimental_data[].statistics,object,yes,,,"Cache of the condition's own distribution_ratios, measured values only (censored bounds are left out); empty when every value of the condition is a bound"
+experimental_data[].statistics.mean_log_d,number,no,log10,derived: utils.condition_statistics,Mean log D over the condition's elements
+experimental_data[].statistics.std_log_d,number,no,dex,derived: utils.condition_statistics,Population standard deviation of log D
+experimental_data[].statistics.min_log_d,number,no,log10,derived: utils.condition_statistics,Smallest log D
+experimental_data[].statistics.max_log_d,number,no,log10,derived: utils.condition_statistics,Largest log D
+experimental_data[].statistics.n_elements,integer,no,,derived: utils.condition_statistics,Number of elements with a log D
+experimental_data[].reference,object,yes,,,"Where the condition's numbers came from (schema v0.3, rel_quest.references.upgrade_reference)"
+experimental_data[].reference.DOI,string|null,yes,,source-transcribed,"Bare, lower-case DOI of the paper that measured the values; never a compilation DOI"
+experimental_data[].reference.URL,string,no,,source-transcribed,Source link when the paper has no DOI
+experimental_data[].reference.Locator,string|null,yes,,curated (parsed by references.parse_locator),"Figure or table in that paper, e.g. 'Figure 3', 'Table S2'"
+performance_summary,object,yes,,,Cache of counts (rel_quest.derived.performance_summary)
+performance_summary.conditions_tested,integer,yes,,derived: derived.performance_summary,Number of conditions
+performance_summary.total_measurements,integer,yes,,derived: derived.performance_summary,Number of D-values
+performance_summary.elements_tested,array,yes,,derived: derived.performance_summary,Same list as elements_measured
+metadata,object,yes,,,"Curation state, dates and lineage"
+metadata.added_date,string,yes,,curated,Date the record was added
+metadata.last_updated,string,yes,,curated,Date the record's content last changed
+metadata.taxonomy_version,string,yes,,curated,Classification generation (independent of schema_version)
+data_quality,object,yes,,,Outlier flags and an uncalibrated quality index
+data_quality.overall_quality_score,integer,yes,,derived: uncertainty.compute_quality_score,"Uncalibrated ordinal index 0-100 (CI width 30, coverage 30, measurement quality 20, outliers 20)"
+data_quality.quality_grade,string,yes,,derived: uncertainty.compute_quality_score,Grade from the score
+data_quality.outlier_flags,array,yes,,derived: uncertainty.detect_outliers,Measurements off their own condition's linear trend
+data_quality.outlier_flags[].condition_id,string,yes,,derived: uncertainty.detect_outliers,Condition holding the flagged value
+data_quality.outlier_flags[].element,string,yes,,derived: uncertainty.detect_outliers,Element of the flagged value
+data_quality.outlier_flags[].log_D_measured,number,yes,log10,derived: uncertainty.detect_outliers,Stored log D
+data_quality.outlier_flags[].log_D_predicted,number,yes,log10,derived: uncertainty.detect_outliers,Value on the condition's own linear fit
+data_quality.outlier_flags[].residual,number,yes,dex,derived: uncertainty.detect_outliers,Measured minus predicted
+data_quality.outlier_flags[].z_score,number,yes,dimensionless,derived: uncertainty.detect_outliers,Residual z-score across the record's eligible conditions
+data_quality.outlier_flags[].severity,string,yes,,derived: uncertainty.detect_outliers,"|z| > 4 High, > 3 Medium"
+elements_measured,array,yes,,derived: utils.collect_elements_measured,"Every element with a measurement, incl. Y/Sc"

@@ -1,0 +1,33 @@
+{
+  "version": "v0.1",
+  "last_updated": "2026-01-15",
+  "description": "Rare earth element properties and groupings",
+  "lanthanides": [
+    {"symbol": "La", "atomic_number": 57, "name": "Lanthanum", "ionic_radius_pm": 116.0},
+    {"symbol": "Ce", "atomic_number": 58, "name": "Cerium", "ionic_radius_pm": 114.3},
+    {"symbol": "Pr", "atomic_number": 59, "name": "Praseodymium", "ionic_radius_pm": 113.0},
+    {"symbol": "Nd", "atomic_number": 60, "name": "Neodymium", "ionic_radius_pm": 112.3},
+    {"symbol": "Pm", "atomic_number": 61, "name": "Promethium", "ionic_radius_pm": 111.0},
+    {"symbol": "Sm", "atomic_number": 62, "name": "Samarium", "ionic_radius_pm": 109.8},
+    {"symbol": "Eu", "atomic_number": 63, "name": "Europium", "ionic_radius_pm": 108.7},
+    {"symbol": "Gd", "atomic_number": 64, "name": "Gadolinium", "ionic_radius_pm": 107.8},
+    {"symbol": "Tb", "atomic_number": 65, "name": "Terbium", "ionic_radius_pm": 106.3},
+    {"symbol": "Dy", "atomic_number": 66, "name": "Dysprosium", "ionic_radius_pm": 105.2},
+    {"symbol": "Ho", "atomic_number": 67, "name": "Holmium", "ionic_radius_pm": 104.1},
+    {"symbol": "Er", "atomic_number": 68, "name": "Erbium", "ionic_radius_pm": 103.0},
+    {"symbol": "Tm", "atomic_number": 69, "name": "Thulium", "ionic_radius_pm": 102.0},
+    {"symbol": "Yb", "atomic_number": 70, "name": "Ytterbium", "ionic_radius_pm": 100.8},
+    {"symbol": "Lu", "atomic_number": 71, "name": "Lutetium", "ionic_radius_pm": 100.1}
+  ],
+  "other_rees": [
+    {"symbol": "Sc", "atomic_number": 21, "name": "Scandium", "ionic_radius_pm": 88.5},
+    {"symbol": "Y", "atomic_number": 39, "name": "Yttrium", "ionic_radius_pm": 104.0}
+  ],
+  "element_groups": {
+    "light_lanthanides": ["La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu"],
+    "heavy_lanthanides": ["Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"],
+    "critical_elements": ["Nd", "Dy", "Eu", "Tb", "Y"],
+    "liu_2023_coverage": ["La", "Ce", "Pr", "Nd", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
+  },
+  "notes": "Ionic radii for Ln3+ in 8-coordinate environment (Shannon radii). Lanthanide contraction: ionic radius decreases from La to Lu by ~16 pm."
+}

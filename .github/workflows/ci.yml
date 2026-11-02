@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]   # main: the public repository
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # 3.10 is the local development version; 3.11 guards against drift.
+        python-version: ["3.10", "3.11"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        # requirements.txt is installed first because that is what the
+        # Dockerfile and deploy.sh use — exercising it here means dependency
+        # drift fails in CI rather than on someone's machine. The package is
+        # then installed editable (--no-deps, since they are already present)
+        # so `import rel_quest` works without sys.path patching.
+        # Playwright's browsers are NOT downloaded — only scripts/download_doi_pdfs.py
+        # needs them, and nothing in the test suite runs it.
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e . --no-deps
+
+      - name: Compile all tracked Python
+        # pytest only imports what the tests reach, so a tracked file can be
+        # syntactically invalid indefinitely — scripts/discover_ideal_extractants.py
+        # sat in the repo as an unterminated docstring until 2026-08-13.
+        # tests/manual/ is included here precisely because pytest skips it.
+        run: python -m compileall -q app.py rel_quest scripts tests
+
+      - name: Validate database
+        # Checks every record against the validator and the JSON Schema. This
+        # is the step that would have caught the stale trend vocabulary
+        # (Peaked/U_Shaped were rejected for every record while the validator
+        # pointed at an old file).
+        run: python scripts/validate_database.py
+
+      - name: Derived fields reproduce
+        # One-command reproducibility check: every field that is a function
+        # of the measurements (trends, bootstrap CIs, statistics, outlier
+        # flags, quality scores, per-cell sigma, performance_summary) is
+        # recomputed with the canonical code and must equal what is stored.
+        run: python scripts/recompute_derived_fields.py --check
+
+      - name: Run tests
+        # pytest.ini restricts collection to tests/ (tests/manual/ holds
+        # print-and-eyeball scripts, not assertions).
+        run: python -m pytest -v
+
+      - name: Database statistics
+        # Not an assertion — prints the headline numbers so a stats change is
+        # visible in the log when reviewing a data PR.
+        if: always()
+        run: python scripts/query_ligands.py --stats
+
+  locked:
+    # The environment the paper's Code Availability statement names: every
+    # package pinned by requirements.lock. The floating job above catches
+    # drift in new releases; this one proves the published environment still
+    # reproduces the database exactly.
+    name: Locked environment (Python 3.11)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.lock
+          pip install -e . --no-deps
+      - name: Validate database
+        run: python scripts/validate_database.py
+      - name: Derived fields reproduce
+        run: python scripts/recompute_derived_fields.py --check
+      - name: Run tests
+        run: python -m pytest -q

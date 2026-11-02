@@ -1,0 +1,359 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bo-li/REEL-QUEST/blob/main/schema/contribution.schema.json",
+  "title": "REEL-QUEST contribution: one paper's measurements",
+  "description": "One file per paper under contributions/, checked by scripts/check_contribution.py and applied by scripts/apply_contributions.py (rel_quest/contributions.py)",
+  "type": "object",
+  "properties": {
+    "DOI": {
+      "type": "string",
+      "pattern": "^10\\.\\d{4,9}/[^\\s,]+$",
+      "description": "The paper that measured the values; never a compilation's DOI"
+    },
+    "citation": {
+      "type": "string"
+    },
+    "proposed_by": {
+      "type": "string",
+      "description": "Who read the paper, when, and from what"
+    },
+    "reviewed_by": {
+      "type": "string",
+      "description": "Who read the paper against this file before it was applied (GOVERNANCE.md §4); required by apply_contributions.py"
+    },
+    "new_ligands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "SMILES": {
+            "type": "string"
+          },
+          "Mechanism": {
+            "type": "string",
+            "enum": [
+              "Cation_Exchange",
+              "Solvation",
+              "Anion_Exchange",
+              "Ion_Pair",
+              "Supramolecular",
+              "Hybrid"
+            ]
+          },
+          "Extractant_Type": {
+            "type": "string",
+            "description": "Legacy SMARTS class label, e.g. Diglycolamide"
+          },
+          "Subtype": {
+            "type": "string",
+            "enum": [
+              "Amide",
+              "BLPhen",
+              "Bipydiamide",
+              "Butanediamide",
+              "Crown_ether",
+              "DAPhen",
+              "DGA",
+              "EDTA",
+              "MAPhen",
+              "Malonamide",
+              "Multident_N_donor",
+              "Nitrilotriacetamide",
+              "Phosphate",
+              "Phosphine_oxide",
+              "Phosphonate",
+              "Phosphoric_acid",
+              "Phthalamic_acid",
+              "Polyether_Diamide",
+              "Polyphenol",
+              "Pyridinediamide",
+              "Tripodal-DGA"
+            ]
+          },
+          "Chemical_Family": {
+            "type": "string",
+            "description": "Same value as Subtype"
+          },
+          "IUPAC_Name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Alternative_Names": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "Structural_Class": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Family_Name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Classification_Reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "CAS_Number": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "PubChem_CID": {
+            "type": [
+              "integer",
+              "string",
+              "null"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "description": "Where the paper identifies the molecule (formula, name, table)"
+          }
+        },
+        "required": [
+          "Name",
+          "SMILES",
+          "Mechanism",
+          "Extractant_Type",
+          "Subtype",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^A\\d{4}$",
+            "description": "A0001, A0002, ... unique in the file; part of the condition_id"
+          },
+          "ligand": {
+            "type": "string",
+            "description": "An existing record's Name, or one of new_ligands"
+          },
+          "conditions": {
+            "type": "object",
+            "properties": {
+              "Acid_Concentration_M": {
+                "type": "number"
+              },
+              "Acid_Name": {
+                "type": "string"
+              },
+              "Additives": {
+                "type": "string"
+              },
+              "Contact_Time": {
+                "type": "string"
+              },
+              "Extractant_Concentration_M": {
+                "type": "number"
+              },
+              "Phase_Modifier_Concentration_M": {
+                "type": "number"
+              },
+              "Phase_Modifier_Name": {
+                "type": "string"
+              },
+              "Solvent_Name": {
+                "type": "string"
+              },
+              "Solvent_Ratio": {
+                "type": "string"
+              },
+              "Temperature_C": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "description": "Schema condition fields (units: M, degC)"
+          },
+          "additives": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "co_extractants": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "type": "string"
+                },
+                "SMILES": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "Concentration_M": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "Name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "reference": {
+            "type": "object",
+            "properties": {
+              "Locator": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "Locator"
+            ],
+            "additionalProperties": false,
+            "description": "Where in the paper the values are: 'Table 2', 'Figure 3', 'Text p. 5'"
+          },
+          "cells": {
+            "type": "object",
+            "propertyNames": {
+              "enum": [
+                "La",
+                "Ce",
+                "Pr",
+                "Nd",
+                "Pm",
+                "Sm",
+                "Eu",
+                "Gd",
+                "Tb",
+                "Dy",
+                "Ho",
+                "Er",
+                "Tm",
+                "Yb",
+                "Lu",
+                "Y",
+                "Sc"
+              ]
+            },
+            "additionalProperties": {
+              "type": "object",
+              "description": "A measured value (log_D or D, with value_origin, and sigma_log_D only when the source states one) or a bound (censor and log_bound)",
+              "properties": {
+                "log_D": {
+                  "type": "number",
+                  "description": "log10 of the distribution ratio"
+                },
+                "D": {
+                  "type": "number",
+                  "exclusiveMinimum": 0,
+                  "description": "The distribution ratio itself; either log_D or D"
+                },
+                "value_origin": {
+                  "type": "string",
+                  "enum": [
+                    "reported",
+                    "digitised",
+                    "interpolated",
+                    "derived"
+                  ],
+                  "description": "reported (a table or the text), digitised (read off a figure), interpolated, derived"
+                },
+                "sigma_log_D": {
+                  "type": "number",
+                  "minimum": 0,
+                  "description": "1 sigma of log D, only when the source states it (a printed error, a calibrated figure)"
+                },
+                "n_replicates": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "censor": {
+                  "type": "string",
+                  "enum": [
+                    ">",
+                    "<"
+                  ],
+                  "description": "The value is a bound: D exceeds (>) or is below (<) 10**log_bound"
+                },
+                "log_bound": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false
+            },
+            "minProperties": 1
+          },
+          "why": {
+            "type": "string",
+            "description": "Why these values and conditions: what the paper says"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "ligand",
+          "reference",
+          "cells",
+          "why"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "applied"
+      ]
+    },
+    "applied_on": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "applied_to": {
+      "type": "string"
+    },
+    "condition_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "DOI",
+    "citation",
+    "proposed_by",
+    "conditions"
+  ],
+  "additionalProperties": true
+}

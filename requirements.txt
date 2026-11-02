@@ -1,0 +1,52 @@
+# Streamlit Dashboard for Ligand Database
+# Core dependencies
+
+# 1.37 is the floor for st.dialog (AI settings popup)
+streamlit>=1.37.0
+pandas>=2.0.0
+plotly>=5.18.0
+scipy>=1.11.0
+numpy>=1.24.0
+
+# Molecular structure rendering
+# Note: RDKit installation via conda is recommended:
+# conda install -c conda-forge rdkit
+# If pip install fails, the app will fallback to showing SMILES text only
+rdkit>=2023.9.1
+
+# Optional: for better performance
+pillow>=10.0.0
+
+# LLM Agent (Ollama integration + cloud backends)
+requests>=2.31.0
+openai>=1.0.0
+
+# Headless browser for PDF downloads (scripts/download_doi_pdfs.py)
+# After install: `playwright install chromium`
+playwright>=1.40.0
+
+# Excel/PowerPoint report generation (scripts/generate_*_slides.py,
+# scripts/generate_ligand_review_sheet.py, scripts/export_presentation_figures.py)
+python-pptx>=0.6.21
+openpyxl>=3.1.0
+
+# PDF reading and page rendering for the verification tooling
+# (scripts/ai_check.py, scripts/build_review_pages.py)
+pypdf>=6.0
+pypdfium2>=4.30
+
+# REST API (rel_quest/api.py; run with `uvicorn rel_quest.api:app`)
+fastapi>=0.110.0
+jsonschema>=4.18.0
+uvicorn>=0.27.0
+
+# MCP server (rel_quest/mcp_server.py; the `mcp` extra). 2.x: FastMCP became MCPServer
+mcp>=2.0
+
+# Test suite (pytest tests/)
+pytest>=7.4.0
+httpx>=0.24.0
+
+# Manuscript figures and draft (paper/figures.py, paper/manuscript.py; the `paper` extra)
+matplotlib>=3.7.0
+python-docx>=1.1.0

@@ -1,0 +1,56 @@
+{
+  "upload_type": "software",
+  "title": "REEL-QUEST: A Digital Platform for Exploration of Rare-Earth Extraction Ligands and Quantitative Understanding of Elemental Selectivity Trends",
+  "version": "1.0.0",
+  "description": "<p>A curated, structure-keyed database of liquid-liquid extraction distribution ratios for the lanthanides (La-Lu) plus Y and Sc, with per-measurement provenance (primary-paper DOI, figure/table locator, source compilation), a 21-subtype SMARTS taxonomy of extractants, per-ligand selectivity-trend classification across the lanthanide series with bootstrap confidence intervals, a Python API, a read-only REST API and an interactive Streamlit dashboard.</p><p>Code is released under the MIT licence (LICENSE); the database, vocabularies and schema under CC BY 4.0 (LICENSE-DATA). Values reached the database from the Liu et al. 2022 JACS Au compilation, the SAFE database (Separation Archive for Elements), the OECD-NEA IDEaL database and Pramanik et al. 2024 JACS; each condition cites the paper that reported it.</p>",
+  "creators": [
+    {
+      "name": "Li, Bo",
+      "affiliation": "Vanderbilt University"
+    },
+    {
+      "name": "Jiang, De-en",
+      "affiliation": "Vanderbilt University"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "rare earth elements",
+    "lanthanides",
+    "solvent extraction",
+    "liquid-liquid extraction",
+    "distribution ratio",
+    "separation factor",
+    "extractant",
+    "ligand database",
+    "cheminformatics"
+  ],
+  "notes": "Code: MIT. Data (data/, vocab/, schema/): CC BY 4.0. See LICENSE and LICENSE-DATA.",
+  "related_identifiers": [
+    {
+      "identifier": "10.1021/jacsau.2c00122",
+      "relation": "isDerivedFrom",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1080/07366299.2025.2564381",
+      "relation": "isDerivedFrom",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1021/jacs.4c07332",
+      "relation": "isDerivedFrom",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://www.oecd-nea.org/ideal/",
+      "relation": "isDerivedFrom",
+      "scheme": "url",
+      "resource_type": "dataset"
+    }
+  ]
+}

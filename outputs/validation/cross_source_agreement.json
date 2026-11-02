@@ -1,0 +1,60 @@
+{
+  "strict": {
+    "same_paper": {
+      "n_cells": 1,
+      "n_ligands": 1,
+      "median_abs_dex": 0.007,
+      "p90_abs_dex": 0.007,
+      "max_abs_dex": 0.007,
+      "bland_altman_bias_dex": -0.007,
+      "bland_altman_loa_dex": null
+    },
+    "different_paper": {
+      "n_cells": 15,
+      "n_ligands": 2,
+      "median_abs_dex": 0.0032,
+      "p90_abs_dex": 0.0086,
+      "max_abs_dex": 0.0089,
+      "bland_altman_bias_dex": -0.0038,
+      "bland_altman_loa_dex": 0.0065
+    },
+    "all": {
+      "n_cells": 16,
+      "n_ligands": 3,
+      "median_abs_dex": 0.0034,
+      "p90_abs_dex": 0.0085,
+      "max_abs_dex": 0.0089,
+      "bland_altman_bias_dex": -0.004,
+      "bland_altman_loa_dex": 0.0065
+    }
+  },
+  "relaxed": {
+    "same_paper": {
+      "n_cells": 1,
+      "n_ligands": 1,
+      "median_abs_dex": 0.007,
+      "p90_abs_dex": 0.007,
+      "max_abs_dex": 0.007,
+      "bland_altman_bias_dex": -0.007,
+      "bland_altman_loa_dex": null
+    },
+    "different_paper": {
+      "n_cells": 49,
+      "n_ligands": 5,
+      "median_abs_dex": 0.023,
+      "p90_abs_dex": 0.085,
+      "max_abs_dex": 0.136,
+      "bland_altman_bias_dex": -0.0213,
+      "bland_altman_loa_dex": 0.0908
+    },
+    "all": {
+      "n_cells": 50,
+      "n_ligands": 6,
+      "median_abs_dex": 0.0195,
+      "p90_abs_dex": 0.085,
+      "max_abs_dex": 0.136,
+      "bland_altman_bias_dex": -0.021,
+      "bland_altman_loa_dex": 0.09
+    }
+  }
+}

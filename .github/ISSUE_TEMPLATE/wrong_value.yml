@@ -1,0 +1,43 @@
+name: A stored value is wrong
+description: A distribution ratio, condition or reference in the database does not match its paper
+title: "[data] "
+labels: ["data"]
+body:
+  - type: input
+    id: ligand
+    attributes:
+      label: Ligand
+      description: The record's Name (as the dashboard or `query_ligands.py --name` shows it)
+    validations:
+      required: true
+  - type: input
+    id: condition
+    attributes:
+      label: Condition id
+      description: From the record's experimental_data (e.g. `SAFE_TODGA_HNO3_1.0M_La_383`); leave blank if unsure
+  - type: input
+    id: doi
+    attributes:
+      label: DOI of the paper the value comes from
+    validations:
+      required: true
+  - type: input
+    id: locator
+    attributes:
+      label: Where in the paper
+      description: Table 2, Figure 3b, text p. 5
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is stored, and what the paper says
+      description: Element, stored value, the paper's value or condition, and how you read it
+      placeholder: "Eu: stored log D 0.45; Table 2 gives D = 1.2 (log D 0.08) at 1 M HNO3, not 3 M"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: A quote, a cropped figure, or the SI page; anything a reviewer can verify

@@ -1,0 +1,26 @@
+# Line-ending policy.
+#
+# This repo is worked on from Windows paths under WSL, where an editor
+# writing CRLF into a shell script is silently fatal: the kernel reads the
+# shebang as "/bin/bash\r" and reports "bad interpreter". deploy.sh shipped
+# broken that way until 2026-08-13. Pin the executable formats to LF so the
+# checkout cannot reintroduce it, whatever core.autocrlf is set to locally.
+
+*.sh text eol=lf
+*.py text eol=lf
+Dockerfile text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Data and vocabularies are read by Python, which is newline-agnostic, but
+# keeping them LF stops a checkout from rewriting every line of a 1.4 MB
+# JSONL file and producing a diff with no content change.
+*.jsonl text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Never touch binaries or the source spreadsheets.
+*.xlsx binary
+*.pptx binary
+*.pdf binary
+*.png binary

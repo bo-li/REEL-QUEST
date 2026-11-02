@@ -1,0 +1,10 @@
+{
+  "description": "Exported from the REEL-QUEST developer repository by scripts/export_public_repo.py; do not edit by hand.",
+  "dev_commit": "a10d81df7eed4d9a094f6613a0dcc70fcffa95b1",
+  "dev_commit_date": "2026-11-03T12:23:50-06:00",
+  "dev_tree_clean": true,
+  "database": "data/sx_ligands_merged_v14_flat.jsonl",
+  "database_sha256": "268e69664a14c3b2cb6b503ad65bdaafa44976e011fe484839426af1f16b5eca",
+  "n_ligands": 169,
+  "n_conditions": 1833
+}

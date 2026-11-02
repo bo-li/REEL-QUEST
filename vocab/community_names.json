@@ -1,0 +1,275 @@
+{
+  "_description": "Maps each ligand to a community-recognized 'Type' label (DAPhen, TODGA, BTBP, ...) used by the RE separation literature. Loaded by scripts/apply_community_names.py. Edit the 'community_name' fields to refine; rationale and example_iupac are informational only.",
+  "_resolution_order": [
+    "by_name (exact Name match — highest priority, used for per-ligand overrides)",
+    "by_family (Family_Name match — applies to all variants v1/v2/...)",
+    "by_extractant_type (fallback that turns the schema label into a display form)"
+  ],
+
+  "by_family": {
+    "3a": {
+      "community_name": "DAPhen",
+      "rationale": "4,7-dichloro-1,10-phenanthroline-2,9-bis(carboxamide) family from Lemport et al. 2020 (RSC Adv, d0ra05182a). DAPhen = DiAmide-Phenanthroline."
+    },
+    "4": {
+      "community_name": "DGA",
+      "rationale": "Liu 2022 internal code; 12 diglycolamide variants with diverse alkyl substitutions (none are TODGA, the symmetric tetra-octyl). Use generic 'DGA' until per-variant community names are curated."
+    },
+    "18C6": {
+      "community_name": "18-Crown-6",
+      "rationale": "Standard crown-ether community name."
+    },
+    "BuPh-MPPhen": {
+      "community_name": "MPPhen",
+      "rationale": "Mono-phosphine-oxide phenanthroline. Note: v2 in DB is actually BPPhen (bis-phosphine-oxide); see by_name override."
+    },
+    "C2-POPPhen": {
+      "community_name": "POPPhen",
+      "rationale": "Phosphoryl-O-phosphate phenanthroline (diethyl phosphonate ester); POPPhen series."
+    },
+    "C4-POPPhen": {
+      "community_name": "POPPhen",
+      "rationale": "Phosphoryl-O-phosphate phenanthroline (dibutyl phosphonate ester); POPPhen series."
+    },
+    "C5-BTBP": {
+      "community_name": "BTBP",
+      "rationale": "Bis-Triazinyl-BiPyridine, n-pentyl variant."
+    },
+    "CA-BTP": {
+      "community_name": "BTP",
+      "rationale": "Bis-Triazinyl-Pyridine, cyclohexyl-annulated variant."
+    },
+    "CMPO": {
+      "community_name": "CMPO",
+      "rationale": "Carbamoyl-Methyl-Phosphine-Oxide (parent)."
+    },
+    "CyMe4-BTBP": {
+      "community_name": "BTBP",
+      "rationale": "Cyclohexyl-Methyl-4 Bis-Triazinyl-BiPyridine; widely used SANEX baseline."
+    },
+    "DBD1MHDGA": {
+      "community_name": "DGA",
+      "rationale": "Asymmetric diglycolamide (di-butyl, di-2-methylheptyl); DGA family."
+    },
+    "DHpyrDGA": {
+      "community_name": "DGA",
+      "rationale": "Diglycolamides with pyrrolidine/piperidine/morpholine amide groups (DHpyrDGA = Dihexyl-pyrrolidinyl-DGA naming series)."
+    },
+    "DMDBO3NPDA": {
+      "community_name": "DGA",
+      "rationale": "Di-methyl-di-butyl(octyl) substituted diglycolamide."
+    },
+    "DMDODGA": {
+      "community_name": "DGA",
+      "rationale": "Di-methyl-di-octyl diglycolamide (DMDODGA = symmetric N,N'-dioctyl-N,N'-dimethyl-DGA)."
+    },
+    "DMDPhDGA": {
+      "community_name": "DGA",
+      "rationale": "Di-methyl-di-phenyl diglycolamide series."
+    },
+    "DMDPhPDA": {
+      "community_name": "PyDA",
+      "rationale": "Pyridine-2,6-dicarboxamide; DMDPhPDA = Di-methyl-di-phenyl-PyDA. (PyDA = DPA family.)"
+    },
+    "DOPTA": {
+      "community_name": "PTA",
+      "rationale": "Phenanthroline-2-carboxamide (mono) / 2,9-dicarboxamide (PTdA) series; DOPTA = Di-Octyl-PTA. Source: Inorg Chem 1c01729."
+    },
+    "Di-n-hexylphosphoric acid (HDHP)": {
+      "community_name": "HDHP",
+      "rationale": "Di-n-hexyl phosphoric acid; community-form abbreviation."
+    },
+    "ETPhenAm)": {
+      "community_name": "PhenAm",
+      "rationale": "Phenanthroline-2-carboxamide (mono-amide); ETPhenAm = Ethyl-Tolyl-PhenAm. Source: Sep Pur Tech 119119."
+    },
+    "Et(pEtPh)Phen": {
+      "community_name": "DAPhen",
+      "rationale": "Et-(para-ethylphenyl)-DAPhen; diamide-phenanthroline family."
+    },
+    "Et-Tol-DAPhen": {
+      "community_name": "DAPhen",
+      "rationale": "Et-Tolyl-DAPhen; diamide-phenanthroline family."
+    },
+    "H": {
+      "community_name": "BPyDA",
+      "rationale": "6,6'-bis(carboxamide)-2,2'-bipyridine variants. Liu 2022 paper internal code; community name = BPyDA (BiPyridyl-DiAmide)."
+    },
+    "HEDTA": {
+      "community_name": "HEDTA",
+      "rationale": "N-(2-hydroxyethyl)ethylenediaminetriacetic acid; community-form abbreviation."
+    },
+    "HL": {
+      "community_name": "Other",
+      "rationale": "Single-ligand family code 'HL' is not a recognised community label; use Other."
+    },
+    "L1": {
+      "community_name": "Tripodal-DGA",
+      "rationale": "Tripodal diglycolamides on a benzene-1,3,5-triyl core (L1_v1/v2/v3 from Liu 2022 codes)."
+    },
+    "MA": {
+      "community_name": "BTBP",
+      "rationale": "Methyl-Annulated BTBP variant; bis-triazinyl-bipyridine series."
+    },
+    "Me-TODGA": {
+      "community_name": "Me-TODGA",
+      "rationale": "Methyl-substituted TODGA (alpha-position); community-recognized name."
+    },
+    "N,N,N',N'-tetrabutylsuccinamide": {
+      "community_name": "TBSA",
+      "rationale": "Tetrabutylsuccinamide; not widely abbreviated, using TBSA as descriptive shorthand."
+    },
+    "NTAamide": {
+      "community_name": "NTAamide",
+      "rationale": "Nitrilotriacetamide; community-form."
+    },
+    "Ph2-BPPhen": {
+      "community_name": "BPPhen",
+      "rationale": "Bis-Phosphine-oxide Phenanthroline; Ph2-BPPhen = diphenyl-BPPhen variant."
+    },
+    "Pyr-PyDA": {
+      "community_name": "PyDA",
+      "rationale": "Pyrrolidinyl-PyDA (pyridine-2,6-dicarboxamide). Note v2 in DB is actually BPyDA (bipyridyl); see by_name override."
+    },
+    "TDDGA": {
+      "community_name": "TDDGA",
+      "rationale": "Tetra-Decyl DiGlycolAmide; community-recognized name."
+    },
+    "THMA": {
+      "community_name": "BTP",
+      "rationale": "Tetrahydro-MA / BTP variant; bis-triazinyl-pyridine annulated series."
+    },
+    "TO(NOPOPO": {
+      "community_name": "NOPOPO",
+      "rationale": "Trioctyl-NOPOPO; community-form for the phosphine-oxide phenanthroline. (DB Name has a literal '(' that is a curation typo.)"
+    },
+    "TPDGA": {
+      "community_name": "TPDGA",
+      "rationale": "Tetra-Propyl DiGlycolAmide; community-recognized name."
+    },
+    "Unknown": {
+      "community_name": "Other",
+      "rationale": "'Unknown' family code is a placeholder. Individual variants get per-Name overrides where possible (see by_name)."
+    },
+    "m-dpa": {
+      "community_name": "DPA",
+      "rationale": "Meta-substituted DiPicolinAmide (pyridine-2,6-dicarboxamide) family. m-dpa_v4 is a bipyridyl variant; see by_name override."
+    },
+    "n-propyl-BTP": {
+      "community_name": "BTP",
+      "rationale": "n-Propyl Bis-Triazinyl-Pyridine."
+    },
+    "nBu-BPPhen": {
+      "community_name": "BPPhen",
+      "rationale": "Bis-Pyrazolyl Phenanthroline (BPPhen) series; nBu-BPPhen = n-butyl variant; v2 is iBu, v3 is nOct (see by_name overrides)."
+    },
+    "quercetin": {
+      "community_name": "Other",
+      "rationale": "Quercetin (natural flavonoid); not a standard separation-community label."
+    },
+    "tetraamide 2,2?-(1,2-phenylenebis(methylene))bis(N,N,N?,N?-tetrabutylmalonamide": {
+      "community_name": "Malonamide",
+      "rationale": "Phenylene-bridged bis-malonamide; malonamide family."
+    }
+  },
+
+  "by_name": {
+    "BuPh-MPPhen_v2": {
+      "community_name": "BPPhen",
+      "rationale": "DB v2 is actually BuPh-BPPhen (bis-phosphine-oxide), not MPPhen (mono). Source Ref_43.pdf identifies it as L1 / BuPh-BPPhen."
+    },
+    "Pyr-PyDA_v2": {
+      "community_name": "BPyDA",
+      "rationale": "DB v2 SMILES is a 2,2'-bipyridine-6,6'-dicarboxamide (BPyDA), not a single-pyridine PyDA. Source Ref_27.pdf identifies it as Pyr-BPyDA."
+    },
+    "m-dpa_v4": {
+      "community_name": "BPyDA",
+      "rationale": "v4 SMILES is a 2,2'-bipyridine variant; the rest of the m-dpa family are PyDA (single pyridine)."
+    },
+    "Pyr-PyDA_v3": {
+      "community_name": "DAPhen",
+      "rationale": "v3 SMILES is a phenanthroline-2,9-diamide (DAPhen), not a PyDA. Per Ref_27 nomenclature this is Pyr-DAPhen."
+    },
+    "Unknown_v2": {
+      "community_name": "BLPhen",
+      "rationale": "Bis-Lactam Phenanthroline (Jansone-Popova 2019, Chem Eur J 201806443). Bornyl-substituted BLPhen."
+    },
+    "Unknown_v3": {
+      "community_name": "DAPhen",
+      "rationale": "Tetraoctyl-1,10-phenanthroline-2,9-dicarboxamide; diamide-phenanthroline family."
+    },
+    "TODGA": {"community_name": "TODGA", "rationale": "N,N,N',N'-tetraoctyl diglycolamide; canonical DGA reference compound."},
+    "TEDGA": {"community_name": "TEDGA", "rationale": "N,N,N',N'-tetraethyl diglycolamide."},
+    "TPrDGA": {"community_name": "TPrDGA", "rationale": "N,N,N',N'-tetrapropyl diglycolamide."},
+    "TEtOMeDGA": {"community_name": "TEtOMeDGA", "rationale": "Tetra-ethyl O-methyl diglycolamide (community-form)."},
+    "DPiperidineDGA": {"community_name": "DGA", "rationale": "Di-piperidinyl DGA."},
+    "DPhen-PyranDGA": {"community_name": "PyranDGA", "rationale": "Pyran-bridged DGA variant."},
+    "DMDO-HPyranDGA": {"community_name": "PyranDGA", "rationale": "Pyran-bridged DGA variant."},
+    "DO-PyranDGA": {"community_name": "PyranDGA", "rationale": "Pyran-bridged DGA variant."},
+    "DBD1MHDGA": {"community_name": "DGA", "rationale": "Asymmetric diglycolamide."},
+    "DOODA(C12)": {"community_name": "DOODA", "rationale": "Di-Oxa-Octane-Di-Amide (C12 chain)."},
+    "DOODA(C8)": {"community_name": "DOODA", "rationale": "Di-Oxa-Octane-Di-Amide (C8 chain)."},
+    "DOODA (C12)": {"community_name": "DOODA", "rationale": "Variant Name (with space)."},
+    "DOODA (C8)": {"community_name": "DOODA", "rationale": "Variant Name (with space)."},
+    "C5BTBP": {"community_name": "BTBP", "rationale": "n-Pentyl BTBP (without hyphen variant)."},
+    "CyMe4BTBP": {"community_name": "BTBP", "rationale": "CyMe4-BTBP (without hyphen variant)."},
+    "CyMe4BTPhen": {"community_name": "BTPhen", "rationale": "Bis-Triazinyl-Phenanthroline (CyMe4 variant)."},
+    "TBP": {"community_name": "TBP", "rationale": "Tributyl phosphate (PUREX baseline extractant)."},
+    "DMDOHEMA": {"community_name": "Malonamide", "rationale": "DMDOHEMA: dimethyl-dioctyl-hexylethoxy-malonamide (DIAMEX baseline)."},
+    "DMDBMA": {"community_name": "Malonamide", "rationale": "Dimethyl-dibutyl-malonamide."},
+    "DHOA": {"community_name": "DHOA", "rationale": "Di-Hexyl-OctanAmide."},
+    "DOHyA": {"community_name": "Amide", "rationale": "Di-octyl-hydroxy-amide."},
+    "HONTA": {"community_name": "HONTA", "rationale": "Hexyl-O-Nitrilo-Tri-Acetamide."},
+    "HEH[EHP]": {"community_name": "HEH[EHP]", "rationale": "Mono-2-ethylhexyl 2-ethylhexylphosphonic acid (PC88A / P507)."},
+    "MA": {"community_name": "BTBP", "rationale": "Methyl-Annulated BTBP."},
+    "L1": {"community_name": "Tripodal-DGA", "rationale": "Standalone benzene-cored tripodal DGA (different from L1 family)."},
+    "L2a": {"community_name": "DGA", "rationale": "L-series asymmetric DGA."},
+    "L2b": {"community_name": "DGA", "rationale": "L-series asymmetric DGA."},
+    "L2c": {"community_name": "DGA", "rationale": "L-series asymmetric DGA."},
+    "L1c": {"community_name": "DGA", "rationale": "L-series asymmetric DGA."},
+    "L1d": {"community_name": "DGA", "rationale": "L-series asymmetric DGA."},
+    "L1e": {"community_name": "DGA", "rationale": "L-series asymmetric DGA."},
+    "L1f": {"community_name": "DGA", "rationale": "L-series asymmetric DGA."},
+    "L4": {"community_name": "DGA", "rationale": "L-series DGA."},
+    "L5a": {"community_name": "DGA", "rationale": "L-series DGA."},
+    "L5b": {"community_name": "DGA", "rationale": "L-series DGA."},
+    "L6a": {"community_name": "DGA", "rationale": "L-series DGA."},
+    "L6b": {"community_name": "DGA", "rationale": "L-series DGA."},
+    "L8": {"community_name": "DGA", "rationale": "L-series DGA."},
+    "LL3": {"community_name": "DGA", "rationale": "LL-series DGA."},
+    "LL7": {"community_name": "DGA", "rationale": "LL-series DGA."},
+    "LL9": {"community_name": "DGA", "rationale": "LL-series DGA."},
+    "LLL14": {"community_name": "DGA", "rationale": "LLL-series DGA."},
+    "10a": {"community_name": "DGA", "rationale": "Liu series DGA."},
+    "18b": {"community_name": "Amide", "rationale": "Liu series amide."},
+    "NEA14": {"community_name": "DGA", "rationale": "NEA series DGA."},
+    "NEA15": {"community_name": "DGA", "rationale": "NEA series DGA."},
+    "NEA16": {"community_name": "DGA", "rationale": "NEA series DGA."},
+    "D3DODGA": {"community_name": "DGA", "rationale": "Di-3-DODGA variant."},
+    "DHD2DGA": {"community_name": "DGA", "rationale": "Di-hexyl-2-DGA variant."},
+    "Et-Me-TODGA-Anti": {"community_name": "Me-TODGA", "rationale": "TODGA stereoisomer."},
+    "Et-Me-TDDGA-Syn": {"community_name": "Me-TDDGA", "rationale": "TDDGA stereoisomer."},
+    "p-TODGA-Syn": {"community_name": "p-TODGA", "rationale": "Phenyl-substituted TODGA stereoisomer."},
+    "p-TDDGA-Syn": {"community_name": "p-TDDGA", "rationale": "Phenyl-substituted TDDGA stereoisomer."},
+    "mTDDGA": {"community_name": "Me-TDDGA", "rationale": "Methyl-TDDGA."},
+    "TBEE-BisDGA": {"community_name": "Bis-DGA", "rationale": "TBEE bridged bis-DGA."},
+    "TBi-PE-BisDGA": {"community_name": "Bis-DGA", "rationale": "TBi-PE bridged bis-DGA."}
+  },
+
+  "by_extractant_type_fallback": {
+    "_description": "Used when no by_name or by_family mapping matches. Cleans the schema label into a display form.",
+    "Diglycolamide": "DGA",
+    "Aromatic_Heterocycle": "Aromatic-N-donor",
+    "Organophosphorus": "Organophosphorus",
+    "Malonamide": "Malonamide",
+    "Amide": "Amide",
+    "Phenanthroline_Amide": "DAPhen",
+    "Phenanthroline_Phosphonate": "POPPhen",
+    "Pyridine_Bisamide": "DPA",
+    "Bipyridyl_Diamide": "BPyDA",
+    "Crown_Ether": "Crown-ether",
+    "Carboxylic_Acid": "Carboxylic-acid",
+    "Other": "Other",
+    "Unknown": "Other"
+  }
+}

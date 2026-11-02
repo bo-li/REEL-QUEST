@@ -1,0 +1,1423 @@
+{
+ "description": "Cross-validation splits for REEL-QUEST. Keys are ligand Names (unique) with InChIKeys; see scripts/make_benchmark_splits.py.",
+ "database": "sx_ligands_merged_v14_flat.jsonl",
+ "seed": 20260923,
+ "grouped_5fold": {
+  "n_folds": 5,
+  "n_groups": 163,
+  "n_multi_ligand_groups": 4,
+  "d_values_per_fold": [
+   1407,
+   1269,
+   1269,
+   1268,
+   1268
+  ],
+  "folds": [
+   [
+    {
+     "name": "TB-HxOXyl-BisDGA",
+     "inchi_key": "QNWZXVBATZRHKZ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TODGA",
+     "inchi_key": "VRZYWIAVUGQHKB-UHFFFAOYSA-N"
+    }
+   ],
+   [
+    {
+     "name": "BLBPy",
+     "inchi_key": "OEVJFIZQAFDGLV-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BisDGA-xylylene",
+     "inchi_key": "HEXUATUNGUUYQF-UHFFFAOYSA-N"
+    },
+    {
+     "name": "C5-BTBP",
+     "inchi_key": "QFZLZKMBZMIWMR-UHFFFAOYSA-N"
+    },
+    {
+     "name": "CyMe4-BTBP",
+     "inchi_key": "LQMBIVGFROFSKX-UHFFFAOYSA-N"
+    },
+    {
+     "name": "D2EHDODGA",
+     "inchi_key": "CLACBCAHOHOSHH-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DBD1MHpDGA",
+     "inchi_key": "SNDPSFAOXBZUOZ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DCH18C6",
+     "inchi_key": "BBGKDYHZQOSNMU-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DCPhenDA-Pyr",
+     "inchi_key": "QZPYPWVEZGKIRO-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHD(IB)CMPO",
+     "inchi_key": "IFVWWKAIDDZAMW-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHDECMP",
+     "inchi_key": "MSULAAVSYZOTHM-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDBO3NPDA",
+     "inchi_key": "SNUQYPHAXLDBHE-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDO-HPyranDGA",
+     "inchi_key": "OBPXKPOYYNVKDH-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDOHEMA",
+     "inchi_key": "QEHSHNRQHFAQEH-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDOMA",
+     "inchi_key": "UBGCCBQQNSSDHM-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DODGA",
+     "inchi_key": "HKMGJHLLYJCPEK-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DODMDGA",
+     "inchi_key": "PVOQYKCILMNUBT-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DOHyA",
+     "inchi_key": "NPCGXZDMAMHSMZ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DOPipDGA",
+     "inchi_key": "DXSVBRXFCKMXOG-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DOPyrDGA",
+     "inchi_key": "ONVAFWWJDXVUMT-UHFFFAOYSA-N"
+    },
+    {
+     "name": "EEPhDAPhen",
+     "inchi_key": "KJIWDRXDHBPXJD-UHFFFAOYSA-N"
+    },
+    {
+     "name": "EMPhPhenCA",
+     "inchi_key": "IMFKCMHYDALNRK-UHFFFAOYSA-N"
+    },
+    {
+     "name": "EPhBPyDA",
+     "inchi_key": "SVQUBZHABUJZAD-UHFFFAOYSA-N"
+    },
+    {
+     "name": "Me-DODGA",
+     "inchi_key": "WHTMDGKHKZCZDV-UHFFFAOYSA-N"
+    },
+    {
+     "name": "MeBDDGA",
+     "inchi_key": "UBTDDCKDHPRFHC-UHFFFAOYSA-N"
+    },
+    {
+     "name": "MeDMDDGA",
+     "inchi_key": "JIBSRKBHFMBASI-UHFFFAOYSA-N"
+    },
+    {
+     "name": "OPPTA",
+     "inchi_key": "WXNGCLBDJACUQG-UHFFFAOYSA-N"
+    },
+    {
+     "name": "OPhDBCMPO",
+     "inchi_key": "ODBURZRXPILWES-UHFFFAOYSA-N"
+    },
+    {
+     "name": "OTPTA",
+     "inchi_key": "JYLNZNBPKFXHCN-UHFFFAOYSA-N"
+    },
+    {
+     "name": "PrDGA",
+     "inchi_key": "ISLAAYAUOAAPFB-UHFFFAOYSA-N"
+    },
+    {
+     "name": "PyrDGA",
+     "inchi_key": "FICLVTQIBBXKDL-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TBBDA",
+     "inchi_key": "SMZNIZWMUHWNBT-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TEH-C5-BisDGA",
+     "inchi_key": "RNJJIIQHGMEKIV-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TEH-C9-BisDGA",
+     "inchi_key": "LCVBOMYNIYBYIV-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TIBDGA",
+     "inchi_key": "FIDHLJDJBAOBCD-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TPDGA",
+     "inchi_key": "HNFBDIODCWGCDE-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TriCADODGA",
+     "inchi_key": "OUDKPXLVCLONLJ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "iBuBPyrPhen",
+     "inchi_key": "KLAPEWQAIGMINM-UHFFFAOYSA-N"
+    },
+    {
+     "name": "mTDDGA",
+     "inchi_key": "QEFSTMGWHFKMQS-UHFFFAOYSA-N"
+    },
+    {
+     "name": "nBuBPyrPhen",
+     "inchi_key": "TZXBCUITSJUVOA-UHFFFAOYSA-N"
+    },
+    {
+     "name": "nOctBPyrPhen",
+     "inchi_key": "AREUMXNLJOCEDL-UHFFFAOYSA-N"
+    },
+    {
+     "name": "p-TODGA-Syn",
+     "inchi_key": "HTPVMKILKGUXQW-LQDDJWCHSA-N"
+    }
+   ],
+   [
+    {
+     "name": "35DMPhEBpyDA",
+     "inchi_key": "ASKISMLRZRPEPD-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BABPy",
+     "inchi_key": "WUEZDQMBBWCCQB-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BMPAMHepPhPO",
+     "inchi_key": "NFJQEQBYDGLXJR-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BMPAOPhPO",
+     "inchi_key": "SGZRFMMIONYDQU-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BuPh-MPPhen",
+     "inchi_key": "MWJGSZMYRGBVAT-UHFFFAOYSA-N"
+    },
+    {
+     "name": "C2-POPPhen",
+     "inchi_key": "DOCWBIUEXDRWEJ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "CA-BTP",
+     "inchi_key": "WSFSXQNTGGHVCL-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DBDDdDGA",
+     "inchi_key": "LNWHXYZFXWHCGB-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DBPhthA",
+     "inchi_key": "CCUXORLXCXIGTA-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DCPhenDA-EtHexPh",
+     "inchi_key": "WKYLSPFAJXSJCH-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DED2MPhPDA",
+     "inchi_key": "JKRJGXFDMPZALM-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DED4MPhPDA",
+     "inchi_key": "UKONYWHRXCJZJA-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DEDDdDGA",
+     "inchi_key": "OLQMYKBKECJKTP-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DH(iB)KEPO",
+     "inchi_key": "YYDZFMOOVARITA-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHDBCMPO",
+     "inchi_key": "JQJFFIHCJXTDBA-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHPA",
+     "inchi_key": "HUDSKKNIXMSHSZ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHTPhBLPhen",
+     "inchi_key": "QSFRTQJEHPGZSO-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDDdDGA",
+     "inchi_key": "QOSVWXLGCCSHBA-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDHMA",
+     "inchi_key": "JNQPKASLXOHIRC-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDODGA",
+     "inchi_key": "BQZNDIBVRLFRSD-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDOHMA",
+     "inchi_key": "BKLYPTAJJXPCPT-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DOPTA",
+     "inchi_key": "BGTCKWCCIHZMOF-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DPDDdDGA",
+     "inchi_key": "CZCFTFYJYZCYPE-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DPhMA",
+     "inchi_key": "HFVHOHNNXRSOBQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "Et-Me-TDDGA-Syn",
+     "inchi_key": "QDGUMFAZAOAUOP-YWPUXERESA-N"
+    },
+    {
+     "name": "Et-Me-TODGA-Anti",
+     "inchi_key": "HZBLZMFFDQVBMU-BCRBLDSWSA-N"
+    },
+    {
+     "name": "HoEPhD(iB)CMPO",
+     "inchi_key": "MELHDKFBYNULMQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "MeOc-MeXyl-BisDGA",
+     "inchi_key": "MKCOZFYPQNOIIN-UHFFFAOYSA-N"
+    },
+    {
+     "name": "PhMPDA",
+     "inchi_key": "COGREDJWOATUMB-UHFFFAOYSA-N"
+    },
+    {
+     "name": "PrODGA",
+     "inchi_key": "VVHYBYZIQVMCHQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "PyrBPDA",
+     "inchi_key": "JDPFYABPQAGLKZ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "PyrPDA",
+     "inchi_key": "VFMJPMHWWGNMKA-UHFFFAOYSA-N"
+    },
+    {
+     "name": "Quercetin",
+     "inchi_key": "REFJWTPEDVJJIY-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TBDAPhen",
+     "inchi_key": "DXPAPNLZYVSLOJ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TBP",
+     "inchi_key": "STCOOQWBFONSKY-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TDdDGA",
+     "inchi_key": null
+    },
+    {
+     "name": "TEH-pXyl-BisDGA",
+     "inchi_key": "NMJSSTZDGBOLAN-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TMPeD(iB)CMPO",
+     "inchi_key": "UQZWSGRELPFVHJ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TO(NOPOPO)",
+     "inchi_key": "KUPKEWFKAPZRSE-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TO-C6-BisDGA",
+     "inchi_key": "VRWZSWJIKBOYEP-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TODAPhen",
+     "inchi_key": "FWOILMOMRNLDNT-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TiAm-Xyl-BisDGA",
+     "inchi_key": "HIRBLUOCMKPFTD-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TriEODODGA",
+     "inchi_key": "XLAMOUQZZWWLND-UHFFFAOYSA-N"
+    }
+   ],
+   [
+    {
+     "name": "18C6",
+     "inchi_key": "XEZNGIUYQVAUSS-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BLPhen",
+     "inchi_key": "OSHNSMIXKYHTPC-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BuPh-BPPhen",
+     "inchi_key": "XKARAZRUSAHXCV-UHFFFAOYSA-N"
+    },
+    {
+     "name": "C8-DOODA",
+     "inchi_key": "POWSNDFKAKPLBR-UHFFFAOYSA-N"
+    },
+    {
+     "name": "CyMe4-BTPhen",
+     "inchi_key": "GFQVTGCFMNWLNU-UHFFFAOYSA-N"
+    },
+    {
+     "name": "D(EB)DECMPO",
+     "inchi_key": "ACGHYBNEVFQZQO-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DCPhenDA-THQ",
+     "inchi_key": "JZRIVAJOKNWFPC-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DED4FPhPDA",
+     "inchi_key": "XEDIKSADOWEMEQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHBLPhenD1",
+     "inchi_key": "RVXLFNIDXTVNAR-BYFPTABSSA-N"
+    },
+    {
+     "name": "DHD(SB)CMPO",
+     "inchi_key": "JVCUXIBMFCSVFY-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHDECMPO",
+     "inchi_key": "VKEFOHKOIBTKPM-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHMorDGA",
+     "inchi_key": "MTAJGTICMHDGGT-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHOA",
+     "inchi_key": "ZFDFITYPADKELQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDBMA",
+     "inchi_key": "MJMAULNTGHSPAS-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDPhPDA",
+     "inchi_key": "FSJRUSXQNWEHKS-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDecODGA",
+     "inchi_key": "GYULJRDWGBDAPW-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DO-PyranDGA",
+     "inchi_key": "YKNQXMRKJGAJAJ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DOMorDGA",
+     "inchi_key": "PGZASICNGYAXAM-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DOTPTA",
+     "inchi_key": "MCZKICOESCXFDF-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DPhD(iB)CMPO",
+     "inchi_key": "UDIWREDTVWUIIP-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DPhPhenDPO",
+     "inchi_key": "FSGLWUQQTYBUOF-UHFFFAOYSA-N"
+    },
+    {
+     "name": "EtODGA",
+     "inchi_key": "KJGNMGNBIKQAPB-UHFFFAOYSA-N"
+    },
+    {
+     "name": "HONTA",
+     "inchi_key": "YTTXOOIRNCYALH-UHFFFAOYSA-N"
+    },
+    {
+     "name": "Me2-TODGA",
+     "inchi_key": "JDYCJJZQNIQUAE-UHFFFAOYSA-N"
+    },
+    {
+     "name": "MeEHDGA",
+     "inchi_key": "YUEQVXMSDUPLRR-UHFFFAOYSA-N"
+    },
+    {
+     "name": "Ph-TODGA",
+     "inchi_key": "XTTAKMVMWSISES-UHFFFAOYSA-N"
+    },
+    {
+     "name": "PiDGA",
+     "inchi_key": "RCQPVDHLHVTUKE-UHFFFAOYSA-N"
+    },
+    {
+     "name": "RSDMeTODGA",
+     "inchi_key": "JDYCJJZQNIQUAE-TYHGNQNSSA-N"
+    },
+    {
+     "name": "T2EHDGA",
+     "inchi_key": "MJJHOBMBUANRML-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TB-C6-BisDGA",
+     "inchi_key": "LQMIPIIVMYLLKY-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TB-Xyl-BisDGA",
+     "inchi_key": "APUXDWXDXWSKPJ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TB-iPE-BisDGA",
+     "inchi_key": "LKMNAFBWLCLVLF-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TB-sHpOXyl-BisDGA",
+     "inchi_key": "QQRQCIVVRNNTNZ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TBDGA",
+     "inchi_key": "YFMTUEQOIRXZOE-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TEH-C8-BisDGA",
+     "inchi_key": "XIMAZUJCZUDTQJ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TEH-mXyl-BisDGA",
+     "inchi_key": "YVWALNHBJHJTLD-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TMPhDGA",
+     "inchi_key": "BNLJYRXSFOWWEH-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TO-C7-BisDGA",
+     "inchi_key": "TYQAYBMQMUXSHB-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TOHFDGA",
+     "inchi_key": "OGYFOYRTVGOBRB-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TOMA",
+     "inchi_key": "GAJFDARXKQIKEX-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TriEtTriDoDGA",
+     "inchi_key": "RTGJHKAYZXOOAU-UHFFFAOYSA-N"
+    },
+    {
+     "name": "nPrBTP",
+     "inchi_key": "RTDHOCYMCCOSDL-UHFFFAOYSA-N"
+    },
+    {
+     "name": "p-TDDGA-Syn",
+     "inchi_key": "QWFMYCIPCXWOML-WPVYDPPMSA-N"
+    }
+   ],
+   [
+    {
+     "name": "24DMPhEBpyDA",
+     "inchi_key": "DLAHYUGMODAYOU-UHFFFAOYSA-N"
+    },
+    {
+     "name": "25DMPhEBpyDA",
+     "inchi_key": "BNKPOTVRINVBDS-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BAPhen",
+     "inchi_key": "WYZOXMWKFQEXBU-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BDODGA",
+     "inchi_key": "HXIRGZIBJYOEOB-UHFFFAOYSA-N"
+    },
+    {
+     "name": "BMPAEHPhPO",
+     "inchi_key": "MDUMTGHPPRNTNG-UHFFFAOYSA-N"
+    },
+    {
+     "name": "C12-DOODA",
+     "inchi_key": "LKLZAWHARMREMK-UHFFFAOYSA-N"
+    },
+    {
+     "name": "C4-POPPhen",
+     "inchi_key": "QTVGTSAEDGYVHM-UHFFFAOYSA-N"
+    },
+    {
+     "name": "D(2OctDec)BLPhenD1",
+     "inchi_key": "IJCAXDDMCWLBSN-JJQVAXEKSA-N"
+    },
+    {
+     "name": "D(CH)D(iB)CMPO",
+     "inchi_key": "UGXZKEURHSTLAO-UHFFFAOYSA-N"
+    },
+    {
+     "name": "D3DODGA",
+     "inchi_key": "UMEYDGRRMVVFMT-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DB18C6",
+     "inchi_key": "YSSSPARMOAYJTE-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DCPhenDA-Carb",
+     "inchi_key": "VQMZZFXFBVKYDC-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DCPhenDA-Pip",
+     "inchi_key": "DIEWIMONBHPLPL-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DED3MPhPDA",
+     "inchi_key": "GSXFZDSGTWLUBJ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHD2DGA",
+     "inchi_key": "UKYLCIZNVWFAPR-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHPipDGA",
+     "inchi_key": "QXCNGRMIBGGKEP-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DHPyrDGA",
+     "inchi_key": "NXTLPRXLDTYDKI-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DIBDODGA",
+     "inchi_key": "ZNZSAWSFXFOCQQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DMDPhDGA",
+     "inchi_key": "HIELYQQIYOVIAZ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DOdMAPTA",
+     "inchi_key": "ZZNJNZOWQSMPAQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "DPhen-PyranDGA",
+     "inchi_key": "FIGWSYFMRYIGLB-UHFFFAOYSA-N"
+    },
+    {
+     "name": "EHPhBPDA",
+     "inchi_key": "YMIXPJHBBRDBED-UHFFFAOYSA-N"
+    },
+    {
+     "name": "EHTPTA",
+     "inchi_key": "ULODQPXYYRXLKQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "EMPhDAPhen",
+     "inchi_key": "FSGXOTSTBMUIOR-UHFFFAOYSA-N"
+    },
+    {
+     "name": "HEHNTA",
+     "inchi_key": "PTLJXXWGCZDIQQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "MOEtDGA",
+     "inchi_key": "DRXHWAJLKSDUDZ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "MeODODGA",
+     "inchi_key": "AAKSFPKJJCLTPC-UHFFFAOYSA-N"
+    },
+    {
+     "name": "OdMAPTA",
+     "inchi_key": "HFFNOVYUYWZBGG-UHFFFAOYSA-N"
+    },
+    {
+     "name": "PSDB18C6",
+     "inchi_key": "GLQZQWXTRVUCFP-UHFFFAOYSA-N"
+    },
+    {
+     "name": "Py-PO-cHex",
+     "inchi_key": "VSHKRCFAZCUGRX-UHFFFAOYSA-N"
+    },
+    {
+     "name": "PyrDAPhen",
+     "inchi_key": "SSZBOZALTHUWAY-UHFFFAOYSA-N"
+    },
+    {
+     "name": "SSDMeTODGA",
+     "inchi_key": "JDYCJJZQNIQUAE-ZPGRZCPFSA-N"
+    },
+    {
+     "name": "TB-C5-BisDGA",
+     "inchi_key": "RNYQPMKNVNBXJQ-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TB-DoOXyl-BisDGA",
+     "inchi_key": "CNHBCPVLJVUOGY-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TBEE-BisDGA",
+     "inchi_key": "LCYPKLKOMBRNAN-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TBMA",
+     "inchi_key": "QTVRIQFMPJRJAK-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TDDGA",
+     "inchi_key": "LYKKRABYZCPCGV-UHFFFAOYSA-N"
+    },
+    {
+     "name": "THDGA",
+     "inchi_key": "MWWLNEFOEFNGMN-UHFFFAOYSA-N"
+    },
+    {
+     "name": "THMA",
+     "inchi_key": "NJIIDYSZCQGUKI-UHFFFAOYSA-N"
+    },
+    {
+     "name": "TMHODGA",
+     "inchi_key": "UVRJLJYDMAFEIY-UHFFFAOYSA-N"
+    }
+   ]
+  ]
+ },
+ "leave_subtype_out": {
+  "Amide": [
+   {
+    "name": "DHOA",
+    "inchi_key": "ZFDFITYPADKELQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DOHyA",
+    "inchi_key": "NPCGXZDMAMHSMZ-UHFFFAOYSA-N"
+   }
+  ],
+  "BLPhen": [
+   {
+    "name": "BLPhen",
+    "inchi_key": "OSHNSMIXKYHTPC-UHFFFAOYSA-N"
+   },
+   {
+    "name": "D(2OctDec)BLPhenD1",
+    "inchi_key": "IJCAXDDMCWLBSN-JJQVAXEKSA-N"
+   },
+   {
+    "name": "DHBLPhenD1",
+    "inchi_key": "RVXLFNIDXTVNAR-BYFPTABSSA-N"
+   },
+   {
+    "name": "DHTPhBLPhen",
+    "inchi_key": "QSFRTQJEHPGZSO-UHFFFAOYSA-N"
+   }
+  ],
+  "Bipydiamide": [
+   {
+    "name": "24DMPhEBpyDA",
+    "inchi_key": "DLAHYUGMODAYOU-UHFFFAOYSA-N"
+   },
+   {
+    "name": "25DMPhEBpyDA",
+    "inchi_key": "BNKPOTVRINVBDS-UHFFFAOYSA-N"
+   },
+   {
+    "name": "35DMPhEBpyDA",
+    "inchi_key": "ASKISMLRZRPEPD-UHFFFAOYSA-N"
+   },
+   {
+    "name": "BABPy",
+    "inchi_key": "WUEZDQMBBWCCQB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "BLBPy",
+    "inchi_key": "OEVJFIZQAFDGLV-UHFFFAOYSA-N"
+   },
+   {
+    "name": "EHPhBPDA",
+    "inchi_key": "YMIXPJHBBRDBED-UHFFFAOYSA-N"
+   },
+   {
+    "name": "EPhBPyDA",
+    "inchi_key": "SVQUBZHABUJZAD-UHFFFAOYSA-N"
+   },
+   {
+    "name": "PyrBPDA",
+    "inchi_key": "JDPFYABPQAGLKZ-UHFFFAOYSA-N"
+   }
+  ],
+  "Butanediamide": [
+   {
+    "name": "TBBDA",
+    "inchi_key": "SMZNIZWMUHWNBT-UHFFFAOYSA-N"
+   }
+  ],
+  "Crown_ether": [
+   {
+    "name": "18C6",
+    "inchi_key": "XEZNGIUYQVAUSS-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DB18C6",
+    "inchi_key": "YSSSPARMOAYJTE-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DCH18C6",
+    "inchi_key": "BBGKDYHZQOSNMU-UHFFFAOYSA-N"
+   },
+   {
+    "name": "PSDB18C6",
+    "inchi_key": "GLQZQWXTRVUCFP-UHFFFAOYSA-N"
+   }
+  ],
+  "DAPhen": [
+   {
+    "name": "BAPhen",
+    "inchi_key": "WYZOXMWKFQEXBU-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DCPhenDA-Carb",
+    "inchi_key": "VQMZZFXFBVKYDC-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DCPhenDA-EtHexPh",
+    "inchi_key": "WKYLSPFAJXSJCH-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DCPhenDA-Pip",
+    "inchi_key": "DIEWIMONBHPLPL-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DCPhenDA-Pyr",
+    "inchi_key": "QZPYPWVEZGKIRO-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DCPhenDA-THQ",
+    "inchi_key": "JZRIVAJOKNWFPC-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DOTPTA",
+    "inchi_key": "MCZKICOESCXFDF-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DOdMAPTA",
+    "inchi_key": "ZZNJNZOWQSMPAQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "EEPhDAPhen",
+    "inchi_key": "KJIWDRXDHBPXJD-UHFFFAOYSA-N"
+   },
+   {
+    "name": "EMPhDAPhen",
+    "inchi_key": "FSGXOTSTBMUIOR-UHFFFAOYSA-N"
+   },
+   {
+    "name": "PyrDAPhen",
+    "inchi_key": "SSZBOZALTHUWAY-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TBDAPhen",
+    "inchi_key": "DXPAPNLZYVSLOJ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TODAPhen",
+    "inchi_key": "FWOILMOMRNLDNT-UHFFFAOYSA-N"
+   }
+  ],
+  "DGA": [
+   {
+    "name": "BDODGA",
+    "inchi_key": "HXIRGZIBJYOEOB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "BisDGA-xylylene",
+    "inchi_key": "HEXUATUNGUUYQF-UHFFFAOYSA-N"
+   },
+   {
+    "name": "D2EHDODGA",
+    "inchi_key": "CLACBCAHOHOSHH-UHFFFAOYSA-N"
+   },
+   {
+    "name": "D3DODGA",
+    "inchi_key": "UMEYDGRRMVVFMT-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DBD1MHpDGA",
+    "inchi_key": "SNDPSFAOXBZUOZ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DBDDdDGA",
+    "inchi_key": "LNWHXYZFXWHCGB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DEDDdDGA",
+    "inchi_key": "OLQMYKBKECJKTP-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DHD2DGA",
+    "inchi_key": "UKYLCIZNVWFAPR-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DHMorDGA",
+    "inchi_key": "MTAJGTICMHDGGT-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DHPipDGA",
+    "inchi_key": "QXCNGRMIBGGKEP-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DHPyrDGA",
+    "inchi_key": "NXTLPRXLDTYDKI-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DIBDODGA",
+    "inchi_key": "ZNZSAWSFXFOCQQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDDdDGA",
+    "inchi_key": "QOSVWXLGCCSHBA-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDO-HPyranDGA",
+    "inchi_key": "OBPXKPOYYNVKDH-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDODGA",
+    "inchi_key": "BQZNDIBVRLFRSD-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDPhDGA",
+    "inchi_key": "HIELYQQIYOVIAZ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDecODGA",
+    "inchi_key": "GYULJRDWGBDAPW-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DO-PyranDGA",
+    "inchi_key": "YKNQXMRKJGAJAJ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DODGA",
+    "inchi_key": "HKMGJHLLYJCPEK-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DODMDGA",
+    "inchi_key": "PVOQYKCILMNUBT-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DOMorDGA",
+    "inchi_key": "PGZASICNGYAXAM-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DOPipDGA",
+    "inchi_key": "DXSVBRXFCKMXOG-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DOPyrDGA",
+    "inchi_key": "ONVAFWWJDXVUMT-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DPDDdDGA",
+    "inchi_key": "CZCFTFYJYZCYPE-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DPhen-PyranDGA",
+    "inchi_key": "FIGWSYFMRYIGLB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "Et-Me-TDDGA-Syn",
+    "inchi_key": "QDGUMFAZAOAUOP-YWPUXERESA-N"
+   },
+   {
+    "name": "Et-Me-TODGA-Anti",
+    "inchi_key": "HZBLZMFFDQVBMU-BCRBLDSWSA-N"
+   },
+   {
+    "name": "EtODGA",
+    "inchi_key": "KJGNMGNBIKQAPB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "MOEtDGA",
+    "inchi_key": "DRXHWAJLKSDUDZ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "Me-DODGA",
+    "inchi_key": "WHTMDGKHKZCZDV-UHFFFAOYSA-N"
+   },
+   {
+    "name": "Me2-TODGA",
+    "inchi_key": "JDYCJJZQNIQUAE-UHFFFAOYSA-N"
+   },
+   {
+    "name": "MeBDDGA",
+    "inchi_key": "UBTDDCKDHPRFHC-UHFFFAOYSA-N"
+   },
+   {
+    "name": "MeDMDDGA",
+    "inchi_key": "JIBSRKBHFMBASI-UHFFFAOYSA-N"
+   },
+   {
+    "name": "MeEHDGA",
+    "inchi_key": "YUEQVXMSDUPLRR-UHFFFAOYSA-N"
+   },
+   {
+    "name": "MeODODGA",
+    "inchi_key": "AAKSFPKJJCLTPC-UHFFFAOYSA-N"
+   },
+   {
+    "name": "MeOc-MeXyl-BisDGA",
+    "inchi_key": "MKCOZFYPQNOIIN-UHFFFAOYSA-N"
+   },
+   {
+    "name": "Ph-TODGA",
+    "inchi_key": "XTTAKMVMWSISES-UHFFFAOYSA-N"
+   },
+   {
+    "name": "PiDGA",
+    "inchi_key": "RCQPVDHLHVTUKE-UHFFFAOYSA-N"
+   },
+   {
+    "name": "PrDGA",
+    "inchi_key": "ISLAAYAUOAAPFB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "PrODGA",
+    "inchi_key": "VVHYBYZIQVMCHQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "PyrDGA",
+    "inchi_key": "FICLVTQIBBXKDL-UHFFFAOYSA-N"
+   },
+   {
+    "name": "RSDMeTODGA",
+    "inchi_key": "JDYCJJZQNIQUAE-TYHGNQNSSA-N"
+   },
+   {
+    "name": "SSDMeTODGA",
+    "inchi_key": "JDYCJJZQNIQUAE-ZPGRZCPFSA-N"
+   },
+   {
+    "name": "T2EHDGA",
+    "inchi_key": "MJJHOBMBUANRML-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TB-C5-BisDGA",
+    "inchi_key": "RNYQPMKNVNBXJQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TB-C6-BisDGA",
+    "inchi_key": "LQMIPIIVMYLLKY-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TB-DoOXyl-BisDGA",
+    "inchi_key": "CNHBCPVLJVUOGY-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TB-HxOXyl-BisDGA",
+    "inchi_key": "QNWZXVBATZRHKZ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TB-Xyl-BisDGA",
+    "inchi_key": "APUXDWXDXWSKPJ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TB-iPE-BisDGA",
+    "inchi_key": "LKMNAFBWLCLVLF-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TB-sHpOXyl-BisDGA",
+    "inchi_key": "QQRQCIVVRNNTNZ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TBDGA",
+    "inchi_key": "YFMTUEQOIRXZOE-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TBEE-BisDGA",
+    "inchi_key": "LCYPKLKOMBRNAN-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TDDGA",
+    "inchi_key": "LYKKRABYZCPCGV-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TDdDGA",
+    "inchi_key": null
+   },
+   {
+    "name": "TEH-C5-BisDGA",
+    "inchi_key": "RNJJIIQHGMEKIV-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TEH-C8-BisDGA",
+    "inchi_key": "XIMAZUJCZUDTQJ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TEH-C9-BisDGA",
+    "inchi_key": "LCVBOMYNIYBYIV-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TEH-mXyl-BisDGA",
+    "inchi_key": "YVWALNHBJHJTLD-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TEH-pXyl-BisDGA",
+    "inchi_key": "NMJSSTZDGBOLAN-UHFFFAOYSA-N"
+   },
+   {
+    "name": "THDGA",
+    "inchi_key": "MWWLNEFOEFNGMN-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TIBDGA",
+    "inchi_key": "FIDHLJDJBAOBCD-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TMHODGA",
+    "inchi_key": "UVRJLJYDMAFEIY-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TMPhDGA",
+    "inchi_key": "BNLJYRXSFOWWEH-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TO-C6-BisDGA",
+    "inchi_key": "VRWZSWJIKBOYEP-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TO-C7-BisDGA",
+    "inchi_key": "TYQAYBMQMUXSHB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TODGA",
+    "inchi_key": "VRZYWIAVUGQHKB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TOHFDGA",
+    "inchi_key": "OGYFOYRTVGOBRB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TPDGA",
+    "inchi_key": "HNFBDIODCWGCDE-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TiAm-Xyl-BisDGA",
+    "inchi_key": "HIRBLUOCMKPFTD-UHFFFAOYSA-N"
+   },
+   {
+    "name": "mTDDGA",
+    "inchi_key": "QEFSTMGWHFKMQS-UHFFFAOYSA-N"
+   },
+   {
+    "name": "p-TDDGA-Syn",
+    "inchi_key": "QWFMYCIPCXWOML-WPVYDPPMSA-N"
+   },
+   {
+    "name": "p-TODGA-Syn",
+    "inchi_key": "HTPVMKILKGUXQW-LQDDJWCHSA-N"
+   }
+  ],
+  "MAPhen": [
+   {
+    "name": "DOPTA",
+    "inchi_key": "BGTCKWCCIHZMOF-UHFFFAOYSA-N"
+   },
+   {
+    "name": "EHTPTA",
+    "inchi_key": "ULODQPXYYRXLKQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "EMPhPhenCA",
+    "inchi_key": "IMFKCMHYDALNRK-UHFFFAOYSA-N"
+   },
+   {
+    "name": "OPPTA",
+    "inchi_key": "WXNGCLBDJACUQG-UHFFFAOYSA-N"
+   },
+   {
+    "name": "OTPTA",
+    "inchi_key": "JYLNZNBPKFXHCN-UHFFFAOYSA-N"
+   },
+   {
+    "name": "OdMAPTA",
+    "inchi_key": "HFFNOVYUYWZBGG-UHFFFAOYSA-N"
+   }
+  ],
+  "Malonamide": [
+   {
+    "name": "DMDBMA",
+    "inchi_key": "MJMAULNTGHSPAS-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDBO3NPDA",
+    "inchi_key": "SNUQYPHAXLDBHE-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDHMA",
+    "inchi_key": "JNQPKASLXOHIRC-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDOHEMA",
+    "inchi_key": "QEHSHNRQHFAQEH-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDOHMA",
+    "inchi_key": "BKLYPTAJJXPCPT-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDOMA",
+    "inchi_key": "UBGCCBQQNSSDHM-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DPhMA",
+    "inchi_key": "HFVHOHNNXRSOBQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "PhMPDA",
+    "inchi_key": "COGREDJWOATUMB-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TBMA",
+    "inchi_key": "QTVRIQFMPJRJAK-UHFFFAOYSA-N"
+   },
+   {
+    "name": "THMA",
+    "inchi_key": "NJIIDYSZCQGUKI-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TOMA",
+    "inchi_key": "GAJFDARXKQIKEX-UHFFFAOYSA-N"
+   }
+  ],
+  "Multident_N_donor": [
+   {
+    "name": "C5-BTBP",
+    "inchi_key": "QFZLZKMBZMIWMR-UHFFFAOYSA-N"
+   },
+   {
+    "name": "CA-BTP",
+    "inchi_key": "WSFSXQNTGGHVCL-UHFFFAOYSA-N"
+   },
+   {
+    "name": "CyMe4-BTBP",
+    "inchi_key": "LQMBIVGFROFSKX-UHFFFAOYSA-N"
+   },
+   {
+    "name": "CyMe4-BTPhen",
+    "inchi_key": "GFQVTGCFMNWLNU-UHFFFAOYSA-N"
+   },
+   {
+    "name": "iBuBPyrPhen",
+    "inchi_key": "KLAPEWQAIGMINM-UHFFFAOYSA-N"
+   },
+   {
+    "name": "nBuBPyrPhen",
+    "inchi_key": "TZXBCUITSJUVOA-UHFFFAOYSA-N"
+   },
+   {
+    "name": "nOctBPyrPhen",
+    "inchi_key": "AREUMXNLJOCEDL-UHFFFAOYSA-N"
+   },
+   {
+    "name": "nPrBTP",
+    "inchi_key": "RTDHOCYMCCOSDL-UHFFFAOYSA-N"
+   }
+  ],
+  "Nitrilotriacetamide": [
+   {
+    "name": "HEHNTA",
+    "inchi_key": "PTLJXXWGCZDIQQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "HONTA",
+    "inchi_key": "YTTXOOIRNCYALH-UHFFFAOYSA-N"
+   }
+  ],
+  "Phosphate": [
+   {
+    "name": "TBP",
+    "inchi_key": "STCOOQWBFONSKY-UHFFFAOYSA-N"
+   }
+  ],
+  "Phosphine_oxide": [
+   {
+    "name": "BMPAEHPhPO",
+    "inchi_key": "MDUMTGHPPRNTNG-UHFFFAOYSA-N"
+   },
+   {
+    "name": "BMPAMHepPhPO",
+    "inchi_key": "NFJQEQBYDGLXJR-UHFFFAOYSA-N"
+   },
+   {
+    "name": "BMPAOPhPO",
+    "inchi_key": "SGZRFMMIONYDQU-UHFFFAOYSA-N"
+   },
+   {
+    "name": "BuPh-BPPhen",
+    "inchi_key": "XKARAZRUSAHXCV-UHFFFAOYSA-N"
+   },
+   {
+    "name": "BuPh-MPPhen",
+    "inchi_key": "MWJGSZMYRGBVAT-UHFFFAOYSA-N"
+   },
+   {
+    "name": "D(CH)D(iB)CMPO",
+    "inchi_key": "UGXZKEURHSTLAO-UHFFFAOYSA-N"
+   },
+   {
+    "name": "D(EB)DECMPO",
+    "inchi_key": "ACGHYBNEVFQZQO-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DH(iB)KEPO",
+    "inchi_key": "YYDZFMOOVARITA-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DHD(IB)CMPO",
+    "inchi_key": "IFVWWKAIDDZAMW-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DHD(SB)CMPO",
+    "inchi_key": "JVCUXIBMFCSVFY-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DHDBCMPO",
+    "inchi_key": "JQJFFIHCJXTDBA-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DHDECMPO",
+    "inchi_key": "VKEFOHKOIBTKPM-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DPhD(iB)CMPO",
+    "inchi_key": "UDIWREDTVWUIIP-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DPhPhenDPO",
+    "inchi_key": "FSGLWUQQTYBUOF-UHFFFAOYSA-N"
+   },
+   {
+    "name": "HoEPhD(iB)CMPO",
+    "inchi_key": "MELHDKFBYNULMQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "OPhDBCMPO",
+    "inchi_key": "ODBURZRXPILWES-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TMPeD(iB)CMPO",
+    "inchi_key": "UQZWSGRELPFVHJ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TO(NOPOPO)",
+    "inchi_key": "KUPKEWFKAPZRSE-UHFFFAOYSA-N"
+   }
+  ],
+  "Phosphonate": [
+   {
+    "name": "C2-POPPhen",
+    "inchi_key": "DOCWBIUEXDRWEJ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "C4-POPPhen",
+    "inchi_key": "QTVGTSAEDGYVHM-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DHDECMP",
+    "inchi_key": "MSULAAVSYZOTHM-UHFFFAOYSA-N"
+   },
+   {
+    "name": "Py-PO-cHex",
+    "inchi_key": "VSHKRCFAZCUGRX-UHFFFAOYSA-N"
+   }
+  ],
+  "Phosphoric_acid": [
+   {
+    "name": "DHPA",
+    "inchi_key": "HUDSKKNIXMSHSZ-UHFFFAOYSA-N"
+   }
+  ],
+  "Phthalamic_acid": [
+   {
+    "name": "DBPhthA",
+    "inchi_key": "CCUXORLXCXIGTA-UHFFFAOYSA-N"
+   }
+  ],
+  "Polyether_Diamide": [
+   {
+    "name": "C12-DOODA",
+    "inchi_key": "LKLZAWHARMREMK-UHFFFAOYSA-N"
+   },
+   {
+    "name": "C8-DOODA",
+    "inchi_key": "POWSNDFKAKPLBR-UHFFFAOYSA-N"
+   }
+  ],
+  "Polyphenol": [
+   {
+    "name": "Quercetin",
+    "inchi_key": "REFJWTPEDVJJIY-UHFFFAOYSA-N"
+   }
+  ],
+  "Pyridinediamide": [
+   {
+    "name": "DED2MPhPDA",
+    "inchi_key": "JKRJGXFDMPZALM-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DED3MPhPDA",
+    "inchi_key": "GSXFZDSGTWLUBJ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DED4FPhPDA",
+    "inchi_key": "XEDIKSADOWEMEQ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DED4MPhPDA",
+    "inchi_key": "UKONYWHRXCJZJA-UHFFFAOYSA-N"
+   },
+   {
+    "name": "DMDPhPDA",
+    "inchi_key": "FSJRUSXQNWEHKS-UHFFFAOYSA-N"
+   },
+   {
+    "name": "PyrPDA",
+    "inchi_key": "VFMJPMHWWGNMKA-UHFFFAOYSA-N"
+   }
+  ],
+  "Tripodal-DGA": [
+   {
+    "name": "TriCADODGA",
+    "inchi_key": "OUDKPXLVCLONLJ-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TriEODODGA",
+    "inchi_key": "XLAMOUQZZWWLND-UHFFFAOYSA-N"
+   },
+   {
+    "name": "TriEtTriDoDGA",
+    "inchi_key": "RTGJHKAYZXOOAU-UHFFFAOYSA-N"
+   }
+  ]
+ }
+}

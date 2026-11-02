@@ -1,0 +1,76 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "REEL-QUEST",
+  "description": "Curated database of rare-earth-element solvent-extraction data with per-measurement provenance, subtype classification and selectivity-trend analysis; Python API, REST API and Streamlit dashboard.",
+  "version": "1.0.0",
+  "codeRepository": "https://github.com/bo-li/REEL-QUEST",
+  "license": [
+    "https://spdx.org/licenses/MIT",
+    "https://spdx.org/licenses/CC-BY-4.0"
+  ],
+  "programmingLanguage": "Python",
+  "runtimePlatform": [
+    "Python 3.10",
+    "Python 3.11"
+  ],
+  "softwareRequirements": [
+    "streamlit>=1.37.0",
+    "pandas>=2.0.0",
+    "plotly>=5.18.0",
+    "scipy>=1.11.0",
+    "numpy>=1.24.0",
+    "rdkit>=2023.9.1",
+    "pillow>=10.0.0",
+    "requests>=2.31.0",
+    "openai>=1.0.0",
+    "playwright>=1.40.0",
+    "python-pptx>=0.6.21",
+    "openpyxl>=3.1.0",
+    "pypdf>=6.0",
+    "pypdfium2>=4.30",
+    "fastapi>=0.110.0",
+    "jsonschema>=4.18.0",
+    "uvicorn>=0.27.0",
+    "mcp>=2.0",
+    "pytest>=7.4.0",
+    "httpx>=0.24.0",
+    "matplotlib>=3.7.0",
+    "python-docx>=1.1.0"
+  ],
+  "dateCreated": "2026-01-20",
+  "dateModified": "2026-10-06",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Bo",
+      "familyName": "Li",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Vanderbilt University"
+      }
+    },
+    {
+      "@type": "Person",
+      "givenName": "De-en",
+      "familyName": "Jiang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Vanderbilt University"
+      }
+    }
+  ],
+  "keywords": [
+    "rare earth elements",
+    "lanthanides",
+    "solvent extraction",
+    "liquid-liquid extraction",
+    "distribution ratio",
+    "separation factor",
+    "extractant",
+    "ligand database",
+    "cheminformatics"
+  ],
+  "developmentStatus": "active",
+  "identifier": "https://doi.org/10.5281/zenodo.23819219"
+}

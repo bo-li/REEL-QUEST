@@ -1,0 +1,63 @@
+{
+  "server": "reel-quest",
+  "tools": [
+    "get_database_statistics",
+    "search_ligands_by_name",
+    "get_ligand_details",
+    "get_ligand_conditions",
+    "search_by_trend",
+    "search_by_mechanism",
+    "search_by_subtype",
+    "get_best_separators",
+    "compare_ligands",
+    "get_ligands_for_element"
+  ],
+  "call": "get_best_separators",
+  "arguments": {
+    "element1": "Eu",
+    "element2": "La",
+    "limit": 3
+  },
+  "is_error": false,
+  "result": {
+    "element1": "Eu",
+    "element2": "La",
+    "total_with_both_elements": 105,
+    "top_separators": [
+      {
+        "name": "DBPhthA",
+        "ligand_family": "Phthalamic_acid",
+        "median_log_SF": 4.3,
+        "SF": 19952.623,
+        "min_log_SF": 4.3,
+        "max_log_SF": 4.3,
+        "n_paired_conditions": 1,
+        "n_bound_pairs": 0,
+        "prefers": "Eu"
+      },
+      {
+        "name": "CA-BTP",
+        "ligand_family": "Multident_N_donor",
+        "median_log_SF": 2.954,
+        "SF": 899.498,
+        "min_log_SF": 2.954,
+        "max_log_SF": 2.954,
+        "n_paired_conditions": 1,
+        "n_bound_pairs": 0,
+        "prefers": "Eu"
+      },
+      {
+        "name": "DODGA",
+        "ligand_family": "DGA",
+        "median_log_SF": 2.527,
+        "SF": 336.512,
+        "min_log_SF": 2.527,
+        "max_log_SF": 2.527,
+        "n_paired_conditions": 1,
+        "n_bound_pairs": 0,
+        "prefers": "Eu"
+      }
+    ],
+    "note": "log SF = log D(Eu) - log D(La) within one condition; the median across a ligand's paired conditions is shown. SF > 1 means Eu is preferentially extracted, SF < 1 means La. Ranked by |log SF|."
+  }
+}

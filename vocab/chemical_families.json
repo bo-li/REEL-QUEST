@@ -1,0 +1,196 @@
+{
+  "version": "2.1",
+  "description": "Single-layer ligand classification for REEL-QUEST v13. The 21 Subtype labels are the canonical and only classification. Both record fields (Chemical_Family and Subtype) carry the same Subtype label. v12's two-layer Chemical_Family taxonomy was retired in v13. Each Subtype carries a donor_group attribute on the vocab side (O_donor / N_O_hybrid / N_donor / P_donor) for documentation and figure-coloring only — it is not stored on records.",
+  "classification_field": "Subtype",
+  "record_fields": ["Chemical_Family", "Subtype"],
+  "record_field_note": "Both fields hold the same 21-label classification for schema stability across earlier consumer code.",
+  "donor_groups": {
+    "O_donor": {
+      "description": "All-oxygen donor ligands: diglycolyl-bisamides, polyether diamides, monoamides, chelating bisamides, crown ethers, and polyphenols.",
+      "subtypes": ["DGA", "Tripodal-DGA", "Polyether_Diamide", "Amide", "Phthalamic_acid", "Malonamide", "Butanediamide", "Crown_ether", "Polyphenol"],
+      "color": "#2E86AB"
+    },
+    "N_O_hybrid": {
+      "description": "Mixed N + O donors: N-centered chelators with carboxylate/amide arms; heterocyclic scaffolds (phen, pyridine, bipyridine) with pendant amide arms.",
+      "subtypes": ["Nitrilotriacetamide", "EDTA", "DAPhen", "MAPhen", "BLPhen", "Pyridinediamide", "Bipydiamide"],
+      "color": "#5C4B8A"
+    },
+    "N_donor": {
+      "description": "All-nitrogen multidentate donors without amide or P=O arms (BTP, BTBP, BTPhen, BPyrPhen).",
+      "subtypes": ["Multident_N_donor"],
+      "color": "#E9C46A"
+    },
+    "P_donor": {
+      "description": "P-centered donors classified by P-functional group, ignoring the rest of the molecular scaffold. Members previously under Amide_Phosphoryl and Phenanthroline_Phosphoryl (v12) are folded into the matching P-functional subtype.",
+      "subtypes": ["Phosphine_oxide", "Phosphonate", "Phosphate", "Phosphoric_acid"],
+      "color": "#C73E1D"
+    }
+  },
+  "subtypes": {
+    "DGA": {
+      "description": "Tridentate O3 diglycolyl-bisamide (2 amide-O + 1 ether-O) — monomeric (TODGA-type) and pre-organized BisDGA (xylylene- or alkyl-tethered).",
+      "donor_set": "O3",
+      "donor_group": "O_donor",
+      "representative": "TODGA",
+      "color": "#2E86AB"
+    },
+    "Tripodal-DGA": {
+      "description": "Tripodal scaffold with three diglycolamide arms (e.g., TriEtTriDoDGA, TREN-DGA).",
+      "donor_set": "O3 × 3",
+      "donor_group": "O_donor",
+      "representative": "TriEtTriDoDGA",
+      "color": "#4A9BC0"
+    },
+    "Polyether_Diamide": {
+      "description": "Tetradentate O4 polyether-diamide (2 amide-O + 2 ether-O) — extended-glycol analogue of DGA (DOODA = dioxa-octanediamide).",
+      "donor_set": "O4",
+      "donor_group": "O_donor",
+      "representative": "DOODA",
+      "color": "#1F6F8B"
+    },
+    "Amide": {
+      "description": "Simple N,N-dialkyl alkanamide; O1 monoamide donor (DHOA-type).",
+      "donor_set": "O1",
+      "donor_group": "O_donor",
+      "representative": "DHOA",
+      "color": "#8DB4D2"
+    },
+    "Phthalamic_acid": {
+      "description": "Amide-carboxylate hybrid (phthalamic-acid-type) chelating O2 bidentate via amide-O + COOH-O.",
+      "donor_set": "O2",
+      "donor_group": "O_donor",
+      "representative": "DBPhthA",
+      "color": "#A8C5DC"
+    },
+    "Malonamide": {
+      "description": "1,3-Bisamide donor with malonyl (C1) bridge; O2 chelating (DMDOHEMA, TOMA).",
+      "donor_set": "O2",
+      "donor_group": "O_donor",
+      "representative": "DMDOHEMA",
+      "color": "#5BB3D6"
+    },
+    "Butanediamide": {
+      "description": "1,4-Bisamide donor with succinyl (C2) bridge (TBBDA).",
+      "donor_set": "O2",
+      "donor_group": "O_donor",
+      "representative": "TBBDA",
+      "color": "#7AC4E0"
+    },
+    "Crown_ether": {
+      "description": "Macrocyclic polyether O-donor; primarily 18-crown-6 and dibenzo/dicyclohexyl/dipyridino derivatives.",
+      "donor_set": "O6",
+      "donor_group": "O_donor",
+      "representative": "18-crown-6",
+      "color": "#6A994E"
+    },
+    "Polyphenol": {
+      "description": "Polyhydroxy-aromatic donor (calix[n]arene-OH, catechol, polyphenolic chelators).",
+      "donor_set": "O2-O4",
+      "donor_group": "O_donor",
+      "representative": "Quercetin",
+      "color": "#A7C957"
+    },
+    "Nitrilotriacetamide": {
+      "description": "N-centered tripod with three amide arms (HONTA-style); N1O3 multidentate.",
+      "donor_set": "N1O3",
+      "donor_group": "N_O_hybrid",
+      "representative": "HONTA",
+      "color": "#A23B72"
+    },
+    "EDTA": {
+      "description": "Aminopolycarboxylic acid chelators (ethylenediaminetetraacetic acid family); HEDTA, CyDTA, etc.",
+      "donor_set": "N2O4-N2O6",
+      "donor_group": "N_O_hybrid",
+      "representative": "HEDTA",
+      "color": "#B85A8E"
+    },
+    "DAPhen": {
+      "description": "1,10-Phenanthroline + diamide arms at 2,9-positions; N2O2.",
+      "donor_set": "N2O2",
+      "donor_group": "N_O_hybrid",
+      "representative": "Et-Tol-DAPhen",
+      "color": "#5C4B8A"
+    },
+    "MAPhen": {
+      "description": "1,10-Phenanthroline + monoamide arm at 2-position; N2O1.",
+      "donor_set": "N2O1",
+      "donor_group": "N_O_hybrid",
+      "representative": "DOPTA",
+      "color": "#7867A4"
+    },
+    "BLPhen": {
+      "description": "Bis-lactam (bi-loop) 1,10-phenanthroline diamide: one phen core with two fused lactam amide loops (BLPhen-type); the preorganized counterpart of DAPhen.",
+      "donor_set": "N4O2-N4O4",
+      "donor_group": "N_O_hybrid",
+      "representative": "DHTPhBLPhen",
+      "color": "#9785BD"
+    },
+    "Pyridinediamide": {
+      "description": "Pyridine-2,6-dicarboxamide scaffold (PDA-type); N1O2.",
+      "donor_set": "N1O2",
+      "donor_group": "N_O_hybrid",
+      "representative": "PDA",
+      "color": "#9E8FC0"
+    },
+    "Bipydiamide": {
+      "description": "6,6'-Bipyridyl-2,2'-dicarboxamide scaffold (BPyDA-type); N2O2. Holds both open-chain (BABPy-type) and preorganized bis-lactam (BLBPy) variants, the way DGA holds monomeric and pre-organized members.",
+      "donor_set": "N2O2",
+      "donor_group": "N_O_hybrid",
+      "representative": "EHPhBPDA",
+      "color": "#B5A8D0"
+    },
+    "Multident_N_donor": {
+      "description": "All-nitrogen multidentate donor: 2,6-bis(triazinyl)pyridines (BTP, N3), 6,6'-bis(triazinyl)bipyridines (BTBP, N4), bis(pyrazolyl)/bis(triazinyl)phenanthrolines (BPyrPhen/BTPhen, N4). No amide or P=O arms.",
+      "donor_set": "N3-N4",
+      "donor_group": "N_donor",
+      "representative": "C5-BTBP",
+      "color": "#E9C46A"
+    },
+    "Phosphine_oxide": {
+      "description": "P with three P-C bonds; R3P=O. Includes pure phosphine oxides (TBPO-type), CMPO-family amidophosphine-oxides, and phen-P=O phosphine-oxide phenanthrolines.",
+      "donor_set": "O1",
+      "donor_group": "P_donor",
+      "representative": "CMPO",
+      "color": "#C73E1D"
+    },
+    "Phosphonate": {
+      "description": "P with at least one P-C bond and at least one P-O ester/acid bond. Includes neutral phosphonate diesters R-P(=O)(OR)2 (DHDECMP, DHDECEP), phosphonate monoester acids R-P(=O)(OR)OH (HEH[EHP] / PC88A / P507), amidophosphonates, and phen-phosphonates.",
+      "donor_set": "O1-O2",
+      "donor_group": "P_donor",
+      "representative": "DHDECMP",
+      "color": "#E76F51"
+    },
+    "Phosphate": {
+      "description": "P with three P-OR bonds (no P-C, no P-OH); (RO)3P=O — trialkyl phosphate (TBP-type).",
+      "donor_set": "O1",
+      "donor_group": "P_donor",
+      "representative": "TBP",
+      "color": "#F18F01"
+    },
+    "Phosphoric_acid": {
+      "description": "P with NO P-C bond and at least one P-OH; (RO)2P(=O)OH or (RO)P(=O)(OH)2 — acidic phosphate ester (HDEHP/DHPA-type). Note: phosphonate monoester acids (R-P(=O)(OR)OH) are NOT Phosphoric_acid — they go to Phosphonate.",
+      "donor_set": "O1-O2 acidic",
+      "donor_group": "P_donor",
+      "representative": "DHPA",
+      "color": "#9B2D11"
+    }
+  },
+  "p_functional_smarts": {
+    "_comment": "SMARTS used to assign P-subtypes by P-functional group. Match order matters — check the P-C bond count FIRST (Phosphine_oxide / Phosphonate), then fall through to all-O variants (Phosphate / Phosphoric_acid). The legacy 'check P-OH first' order mis-bucketed phosphonate monoester acids like HEH[EHP].",
+    "Phosphine_oxide":     "[PX4](=[OX1])([#6])([#6])[#6]",
+    "Phosphonate":         "[PX4](=[OX1])(~[OX2,OX1H])(~[OX2,OX1H])[#6]",
+    "Phosphate":           "[PX4](=[OX1])([OX2][#6])([OX2][#6])[OX2][#6]",
+    "Phosphoric_acid":     "[PX4](=[OX1])([OX2,OX1H])([OX2,OX1H])[OX2H]"
+  },
+  "p_match_order": ["Phosphine_oxide", "Phosphonate", "Phosphate", "Phosphoric_acid"],
+  "v12_to_v13_consolidations": {
+    "_comment": "Documentation of how v12 subtypes mapped into v13 subtypes.",
+    "Amide_Phosphoryl/Amidophosphine_oxide":   "Phosphine_oxide",
+    "Amide_Phosphoryl/Amidophosphonate":       "Phosphonate",
+    "Phen_Phosphoryl/Phosphine-oxide phenanthroline": "Phosphine_oxide",
+    "Phen_Phosphoryl/Phosphonate phenanthroline":     "Phosphonate",
+    "Multident_N_donor/(all 3 subtypes)":      "Multident_N_donor (collapsed)",
+    "Polyether_Diamide/DOODA":                 "Polyether_Diamide (subtype name = family name)",
+    "N-Tripod_Chelator/DTA":                   "EDTA (renamed)"
+  }
+}

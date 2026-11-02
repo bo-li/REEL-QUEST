@@ -1,0 +1,8 @@
+version: "3.9"
+# CPU-only override – removes GPU reservation
+# Usage: docker compose -f docker-compose.yml -f docker-compose.cpu.yml up -d ollama
+services:
+  ollama:
+    deploy:
+      resources:
+        reservations: {}

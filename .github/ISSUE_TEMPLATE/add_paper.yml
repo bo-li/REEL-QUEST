@@ -1,0 +1,32 @@
+name: Add a paper's data
+description: A paper with lanthanide distribution ratios that the database should carry (no JSON needed)
+title: "[paper] "
+labels: ["data", "contribution"]
+body:
+  - type: input
+    id: doi
+    attributes:
+      label: DOI
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where the values are
+      description: Which tables or figures hold the distribution ratios, for which ligands and conditions
+    validations:
+      required: true
+  - type: textarea
+    id: ligands
+    attributes:
+      label: Ligands
+      description: Names as the paper gives them; a SMILES or the formula if you have it
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your relation to the paper
+      options:
+        - Author
+        - Reader
+    validations:
+      required: true

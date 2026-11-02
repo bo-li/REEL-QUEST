@@ -1,0 +1,936 @@
+{
+  "schema_version": "v0.3",
+  "ligand": {
+    "SMILES": "CCCCCCCCCCC(CCCCCCCC)Cn1c(=O)c2nc3c(ccc4cc5c(nc43)c(=O)n(CC(CCCCCCCC)CCCCCCCCCC)c3ccc(C(C)(C)C)cc53)cc2c2cc(C(C)(C)C)ccc21",
+    "Name": "BLPhen",
+    "IUPAC_Name": null,
+    "InChI": "InChI=1S/C74H110N4O2/c1-11-15-19-23-27-29-33-37-41-55(39-35-31-25-21-17-13-3)53-77-65-47-45-59(73(5,6)7)51-61(65)63-49-57-43-44-58-50-64-62-52-60(74(8,9)10)46-48-66(62)78(72(80)70(64)76-68(58)67(57)75-69(63)71(77)79)54-56(40-36-32-26-22-18-14-4)42-38-34-30-28-24-20-16-12-2/h43-52,55-56H,11-42,53-54H2,1-10H3",
+    "InChI_Key": "OSHNSMIXKYHTPC-UHFFFAOYSA-N",
+    "CAS_Number": null,
+    "PubChem_CID": null,
+    "Molecular_Formula": "C74H110N4O2",
+    "Molecular_Weight": 1087.72,
+    "Mechanism": "Solvation",
+    "Extractant_Type": "Aromatic_Heterocycle",
+    "Subtype": "BLPhen",
+    "Chemical_Family": "BLPhen",
+    "Community_Name": "BLPhen",
+    "Alternative_Names": [
+      "bis-lactam-1,10-phenanthroline"
+    ]
+  },
+  "selectivity": {
+    "trend_classification": "Reverse",
+    "trend_confidence": "High",
+    "element_coverage": [
+      "La",
+      "Ce",
+      "Pr",
+      "Nd",
+      "Sm",
+      "Eu",
+      "Gd",
+      "Tb",
+      "Dy",
+      "Ho",
+      "Er",
+      "Tm",
+      "Yb",
+      "Lu"
+    ],
+    "slope": -0.1317,
+    "r_squared": 0.899,
+    "notes": "Based on 7 experimental condition(s) with linear regression + peak heuristic",
+    "slope_CI_lower": -0.150283,
+    "slope_CI_upper": -0.114599,
+    "slope_std": 0.009086
+  },
+  "experimental_data": [
+    {
+      "condition_id": "RQ-001793",
+      "Acid_Name": "HNO3",
+      "Acid_Concentration_M": 0.225,
+      "Extractant_Concentration_M": 0.007,
+      "Solvent_Name": "1,2-dichloroethane",
+      "Temperature_C": 25.0,
+      "Contact_Time": "12 h",
+      "distribution_ratios": {
+        "La": {
+          "value": 2.16,
+          "log_value": 0.3345,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ce": {
+          "value": 1.85,
+          "log_value": 0.2672,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Pr": {
+          "value": 1.24,
+          "log_value": 0.0934,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Nd": {
+          "value": 0.67,
+          "log_value": -0.1739,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Sm": {
+          "value": 0.31,
+          "log_value": -0.5086,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Eu": {
+          "value": 0.2,
+          "log_value": -0.699,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Gd": {
+          "value": 0.1,
+          "log_value": -1.0,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tb": {
+          "value": 0.07,
+          "log_value": -1.1549,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Dy": {
+          "value": 0.07,
+          "log_value": -1.1549,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ho": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Er": {
+          "value": 0.1,
+          "log_value": -1.0,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tm": {
+          "value": 0.07,
+          "log_value": -1.1549,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Yb": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Lu": {
+          "value": 0.08,
+          "log_value": -1.0969,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        }
+      },
+      "statistics": {
+        "mean_log_d": -0.692,
+        "std_log_d": 0.564,
+        "min_log_d": -1.222,
+        "max_log_d": 0.335,
+        "n_elements": 14
+      },
+      "reference": {
+        "DOI": "10.1021/jacs.4c07332",
+        "Locator": "Table S2"
+      }
+    },
+    {
+      "condition_id": "RQ-001794",
+      "Acid_Name": "HNO3",
+      "Acid_Concentration_M": 0.6,
+      "Extractant_Concentration_M": 0.007,
+      "Solvent_Name": "1,2-dichloroethane",
+      "Temperature_C": 25.0,
+      "Contact_Time": "12 h",
+      "distribution_ratios": {
+        "La": {
+          "value": 4.81,
+          "log_value": 0.6821,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ce": {
+          "value": 2.59,
+          "log_value": 0.4133,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Pr": {
+          "value": 1.45,
+          "log_value": 0.1614,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Nd": {
+          "value": 0.73,
+          "log_value": -0.1367,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Sm": {
+          "value": 0.4,
+          "log_value": -0.3979,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Eu": {
+          "value": 0.25,
+          "log_value": -0.6021,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Gd": {
+          "value": 0.13,
+          "log_value": -0.8861,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tb": {
+          "value": 0.09,
+          "log_value": -1.0458,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Dy": {
+          "value": 0.08,
+          "log_value": -1.0969,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ho": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Er": {
+          "value": 0.09,
+          "log_value": -1.0458,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tm": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Yb": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Lu": {
+          "value": 0.07,
+          "log_value": -1.1549,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        }
+      },
+      "statistics": {
+        "mean_log_d": -0.627,
+        "std_log_d": 0.638,
+        "min_log_d": -1.222,
+        "max_log_d": 0.682,
+        "n_elements": 14
+      },
+      "reference": {
+        "DOI": "10.1021/jacs.4c07332",
+        "Locator": "Table S2"
+      }
+    },
+    {
+      "condition_id": "RQ-001795",
+      "Acid_Name": "HNO3",
+      "Acid_Concentration_M": 1.0,
+      "Extractant_Concentration_M": 0.007,
+      "Solvent_Name": "1,2-dichloroethane",
+      "Temperature_C": 25.0,
+      "Contact_Time": "12 h",
+      "distribution_ratios": {
+        "La": {
+          "value": 11.19,
+          "log_value": 1.0488,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ce": {
+          "value": 2.63,
+          "log_value": 0.42,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Pr": {
+          "value": 1.37,
+          "log_value": 0.1367,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Nd": {
+          "value": 0.72,
+          "log_value": -0.1427,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Sm": {
+          "value": 0.43,
+          "log_value": -0.3665,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Eu": {
+          "value": 0.26,
+          "log_value": -0.585,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Gd": {
+          "value": 0.14,
+          "log_value": -0.8539,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tb": {
+          "value": 0.1,
+          "log_value": -1.0,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Dy": {
+          "value": 0.08,
+          "log_value": -1.0969,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ho": {
+          "value": 0.07,
+          "log_value": -1.1549,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Er": {
+          "value": 0.09,
+          "log_value": -1.0458,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tm": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Yb": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Lu": {
+          "value": 0.07,
+          "log_value": -1.1549,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        }
+      },
+      "statistics": {
+        "mean_log_d": -0.588,
+        "std_log_d": 0.688,
+        "min_log_d": -1.222,
+        "max_log_d": 1.049,
+        "n_elements": 14
+      },
+      "reference": {
+        "DOI": "10.1021/jacs.4c07332",
+        "Locator": "Table S2"
+      }
+    },
+    {
+      "condition_id": "RQ-001796",
+      "Acid_Name": "HNO3",
+      "Acid_Concentration_M": 2.0,
+      "Extractant_Concentration_M": 0.007,
+      "Solvent_Name": "1,2-dichloroethane",
+      "Temperature_C": 25.0,
+      "Contact_Time": "12 h",
+      "distribution_ratios": {
+        "La": {
+          "value": 5.73,
+          "log_value": 0.7582,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ce": {
+          "value": 2.26,
+          "log_value": 0.3541,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Pr": {
+          "value": 1.36,
+          "log_value": 0.1335,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Nd": {
+          "value": 0.9,
+          "log_value": -0.0458,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Sm": {
+          "value": 0.6,
+          "log_value": -0.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Eu": {
+          "value": 0.34,
+          "log_value": -0.4685,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Gd": {
+          "value": 0.16,
+          "log_value": -0.7959,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tb": {
+          "value": 0.13,
+          "log_value": -0.8861,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Dy": {
+          "value": 0.1,
+          "log_value": -1.0,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ho": {
+          "value": 0.08,
+          "log_value": -1.0969,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Er": {
+          "value": 0.08,
+          "log_value": -1.0969,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tm": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Yb": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Lu": {
+          "value": 0.07,
+          "log_value": -1.1549,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        }
+      },
+      "statistics": {
+        "mean_log_d": -0.569,
+        "std_log_d": 0.633,
+        "min_log_d": -1.222,
+        "max_log_d": 0.758,
+        "n_elements": 14
+      },
+      "reference": {
+        "DOI": "10.1021/jacs.4c07332",
+        "Locator": "Table S2"
+      }
+    },
+    {
+      "condition_id": "RQ-001797",
+      "Acid_Name": "HNO3",
+      "Acid_Concentration_M": 3.0,
+      "Extractant_Concentration_M": 0.007,
+      "Solvent_Name": "1,2-dichloroethane",
+      "Temperature_C": 25.0,
+      "Contact_Time": "12 h",
+      "distribution_ratios": {
+        "La": {
+          "value": 3.03,
+          "log_value": 0.4814,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ce": {
+          "value": 1.82,
+          "log_value": 0.2601,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Pr": {
+          "value": 1.29,
+          "log_value": 0.1106,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Nd": {
+          "value": 0.95,
+          "log_value": -0.0223,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Sm": {
+          "value": 0.73,
+          "log_value": -0.1367,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Eu": {
+          "value": 0.42,
+          "log_value": -0.3768,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Gd": {
+          "value": 0.22,
+          "log_value": -0.6576,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tb": {
+          "value": 0.18,
+          "log_value": -0.7447,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Dy": {
+          "value": 0.15,
+          "log_value": -0.8239,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ho": {
+          "value": 0.11,
+          "log_value": -0.9586,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Er": {
+          "value": 0.11,
+          "log_value": -0.9586,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tm": {
+          "value": 0.09,
+          "log_value": -1.0458,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Yb": {
+          "value": 0.09,
+          "log_value": -1.0458,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Lu": {
+          "value": 0.09,
+          "log_value": -1.0458,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        }
+      },
+      "statistics": {
+        "mean_log_d": -0.497,
+        "std_log_d": 0.521,
+        "min_log_d": -1.046,
+        "max_log_d": 0.481,
+        "n_elements": 14
+      },
+      "reference": {
+        "DOI": "10.1021/jacs.4c07332",
+        "Locator": "Table S2"
+      }
+    },
+    {
+      "condition_id": "RQ-001798",
+      "Acid_Name": "HNO3",
+      "Acid_Concentration_M": 5.0,
+      "Extractant_Concentration_M": 0.007,
+      "Solvent_Name": "1,2-dichloroethane",
+      "Temperature_C": 25.0,
+      "Contact_Time": "12 h",
+      "distribution_ratios": {
+        "La": {
+          "value": 2.37,
+          "log_value": 0.3747,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ce": {
+          "value": 1.69,
+          "log_value": 0.2279,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Pr": {
+          "value": 1.24,
+          "log_value": 0.0934,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Nd": {
+          "value": 0.88,
+          "log_value": -0.0555,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Sm": {
+          "value": 0.68,
+          "log_value": -0.1675,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Eu": {
+          "value": 0.41,
+          "log_value": -0.3872,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Gd": {
+          "value": 0.23,
+          "log_value": -0.6383,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tb": {
+          "value": 0.19,
+          "log_value": -0.7212,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Dy": {
+          "value": 0.13,
+          "log_value": -0.8861,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ho": {
+          "value": 0.12,
+          "log_value": -0.9208,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Er": {
+          "value": 0.12,
+          "log_value": -0.9208,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tm": {
+          "value": 0.08,
+          "log_value": -1.0969,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Yb": {
+          "value": 0.1,
+          "log_value": -1.0,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Lu": {
+          "value": 0.1,
+          "log_value": -1.0,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        }
+      },
+      "statistics": {
+        "mean_log_d": -0.507,
+        "std_log_d": 0.492,
+        "min_log_d": -1.097,
+        "max_log_d": 0.375,
+        "n_elements": 14
+      },
+      "reference": {
+        "DOI": "10.1021/jacs.4c07332",
+        "Locator": "Table S2"
+      }
+    },
+    {
+      "condition_id": "RQ-001799",
+      "Acid_Name": "HNO3",
+      "Acid_Concentration_M": 0.9,
+      "Extractant_Concentration_M": 0.007,
+      "Solvent_Name": "1,2-dichloroethane",
+      "Temperature_C": 25.5,
+      "Contact_Time": "24 h",
+      "distribution_ratios": {
+        "La": {
+          "value": 11.75,
+          "log_value": 1.07,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ce": {
+          "value": 4.37,
+          "log_value": 0.6405,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Pr": {
+          "value": 1.48,
+          "log_value": 0.1703,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Nd": {
+          "value": 0.76,
+          "log_value": -0.1192,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Sm": {
+          "value": 0.36,
+          "log_value": -0.4437,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Eu": {
+          "value": 0.22,
+          "log_value": -0.6576,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Gd": {
+          "value": 0.13,
+          "log_value": -0.8861,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tb": {
+          "value": 0.13,
+          "log_value": -0.8861,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Dy": {
+          "value": 0.1,
+          "log_value": -1.0,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Ho": {
+          "value": 0.09,
+          "log_value": -1.0458,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Er": {
+          "value": 0.08,
+          "log_value": -1.0969,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Tm": {
+          "value": 0.06,
+          "log_value": -1.2218,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Yb": {
+          "value": 0.08,
+          "log_value": -1.0969,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        },
+        "Lu": {
+          "value": 0.02,
+          "log_value": -1.699,
+          "n_replicates": 3,
+          "sigma_log_D": 0.0152,
+          "source_quality": "table"
+        }
+      },
+      "statistics": {
+        "mean_log_d": -0.591,
+        "std_log_d": 0.746,
+        "min_log_d": -1.699,
+        "max_log_d": 1.07,
+        "n_elements": 14
+      },
+      "reference": {
+        "DOI": "10.1021/jacs.4c07332",
+        "Locator": "Table S1"
+      }
+    }
+  ],
+  "performance_summary": {
+    "conditions_tested": 7,
+    "total_measurements": 98,
+    "elements_tested": [
+      "La",
+      "Ce",
+      "Pr",
+      "Nd",
+      "Sm",
+      "Eu",
+      "Gd",
+      "Tb",
+      "Dy",
+      "Ho",
+      "Er",
+      "Tm",
+      "Yb",
+      "Lu"
+    ]
+  },
+  "metadata": {
+    "added_date": "2026-08-25",
+    "last_updated": "2026-09-23",
+    "taxonomy_version": "v13_flat"
+  },
+  "elements_measured": [
+    "La",
+    "Ce",
+    "Pr",
+    "Nd",
+    "Sm",
+    "Eu",
+    "Gd",
+    "Tb",
+    "Dy",
+    "Ho",
+    "Er",
+    "Tm",
+    "Yb",
+    "Lu"
+  ],
+  "data_quality": {
+    "overall_quality_score": 90,
+    "quality_grade": "High",
+    "outlier_flags": []
+  }
+}

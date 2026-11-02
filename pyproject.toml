@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reel-quest"
+description = "Curated database of rare-earth-element extraction data with mechanism classification and selectivity-trend analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+# Code is MIT (LICENSE). The database, vocabularies and schema are CC BY 4.0
+# (LICENSE-DATA); they are not package data, see [tool.setuptools] below.
+license = { text = "MIT" }
+keywords = ["chemistry", "rare-earth", "solvent-extraction", "lanthanides", "database"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+# Kept in step with requirements.txt, which Docker and deploy.sh install
+# directly (a separate file keeps the Docker dependency layer cacheable).
+# tests/test_packaging.py fails if the two drift apart.
+dependencies = [
+    "streamlit>=1.37.0",
+    "pandas>=2.0.0",
+    "plotly>=5.18.0",
+    "scipy>=1.11.0",
+    "numpy>=1.24.0",
+    "rdkit>=2023.9.1",
+    "pillow>=10.0.0",
+    "requests>=2.31.0",
+    "openai>=1.0.0",
+    "playwright>=1.40.0",
+    "python-pptx>=0.6.21",
+    "openpyxl>=3.1.0",
+    "pypdf>=6.0",
+    "pypdfium2>=4.30",
+    "fastapi>=0.110.0",
+    "jsonschema>=4.18.0",
+    "uvicorn>=0.27.0",
+]
+
+# Version lives in rel_quest/__init__.py so there is a single source of truth.
+dynamic = ["version"]
+
+[project.optional-dependencies]
+# httpx backs fastapi.testclient in tests/test_api.py
+dev = ["pytest>=7.4.0", "httpx>=0.24.0"]
+# paper/figures.py (manuscript figures, vector PDF), paper/manuscript.py (Word draft)
+paper = ["matplotlib>=3.7.0", "python-docx>=1.1.0"]
+# rel_quest/mcp_server.py (Model Context Protocol server)
+mcp = ["mcp>=2.0"]
+
+[project.scripts]
+# stdio MCP server; see docs/MCP_SERVER.md
+reel-quest-mcp = "rel_quest.mcp_server:main"
+
+[project.urls]
+Repository = "https://github.com/bo-li/REEL-QUEST"
+Documentation = "https://github.com/bo-li/REEL-QUEST/blob/main/docs/DATABASE_STRUCTURE.md"
+Changelog = "https://github.com/bo-li/REEL-QUEST/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+# Only the library ships. app.py is the Streamlit entry point, run in place
+# via `streamlit run app.py`, and scripts/ holds one-off migration tools —
+# neither belongs in site-packages.
+#
+# Install editable: `pip install -e .`
+#
+# The database and vocabularies are NOT package data — they live at the repo
+# root (data/, vocab/) and LigandDatabase resolves them relative to the package
+# directory. That works for an editable install, where the package stays in the
+# checkout. A non-editable install imports fine but raises FileNotFoundError on
+# LigandDatabase(), since site-packages has no data/ alongside it. Pass an
+# explicit db_path if you need that, or keep the checkout.
+packages = ["rel_quest"]
+
+[tool.setuptools.dynamic]
+version = { attr = "rel_quest.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# tests/manual holds print-and-eyeball scripts, not assertions — run by hand.
+norecursedirs = ["manual", ".claude", "data", "docs", "outputs"]

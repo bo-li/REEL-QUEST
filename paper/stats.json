@@ -1,0 +1,811 @@
+{
+  "schema_version": "v0.3",
+  "n_ligands": 169,
+  "n_conditions": 1833,
+  "n_d_values": 6481,
+  "n_distinct_primary_dois": 111,
+  "n_conditions_url_only": 0,
+  "n_conditions_with_locator": 1833,
+  "provenance_level_conditions": {
+    "aggregator": 1762,
+    "primary": 71
+  },
+  "ligands_by_data_source": {
+    "Liu_2022_JACSAu": 99,
+    "SAFE_01262026": 40,
+    "OECD_NEA_IDEAL": 20,
+    "Literature_curated": 6,
+    "Pramanik_2024_JACS": 4
+  },
+  "conditions_by_origin": {
+    "SAFE": 1549,
+    "IDEAL": 119,
+    "Liu2022": 94,
+    "Lit": 43,
+    "Pramanik2024": 28
+  },
+  "d_values_by_origin": {
+    "SAFE": 3763,
+    "IDEAL": 1112,
+    "Liu2022": 616,
+    "Lit": 602,
+    "Pramanik2024": 388
+  },
+  "d_values_by_source_quality": {
+    "figure": 5329,
+    "table": 1152
+  },
+  "d_values_by_element": {
+    "La": 507,
+    "Ce": 414,
+    "Pr": 468,
+    "Nd": 665,
+    "Pm": 0,
+    "Sm": 446,
+    "Eu": 1103,
+    "Gd": 461,
+    "Tb": 318,
+    "Dy": 442,
+    "Ho": 325,
+    "Er": 375,
+    "Tm": 248,
+    "Yb": 312,
+    "Lu": 323,
+    "Y": 64,
+    "Sc": 10
+  },
+  "ligands_measuring_element": {
+    "La": 109,
+    "Ce": 92,
+    "Pr": 100,
+    "Nd": 104,
+    "Pm": 0,
+    "Sm": 98,
+    "Eu": 160,
+    "Gd": 86,
+    "Tb": 77,
+    "Dy": 84,
+    "Ho": 69,
+    "Er": 82,
+    "Tm": 64,
+    "Yb": 71,
+    "Lu": 71,
+    "Y": 4,
+    "Sc": 1
+  },
+  "mechanisms": {
+    "Solvation": 120,
+    "Cation_Exchange": 49
+  },
+  "subtypes": {
+    "DGA": 73,
+    "Phosphine_oxide": 18,
+    "DAPhen": 13,
+    "Malonamide": 11,
+    "Bipydiamide": 8,
+    "Multident_N_donor": 8,
+    "MAPhen": 6,
+    "Pyridinediamide": 6,
+    "BLPhen": 4,
+    "Crown_ether": 4,
+    "Phosphonate": 4,
+    "Tripodal-DGA": 3,
+    "Amide": 2,
+    "Nitrilotriacetamide": 2,
+    "Polyether_Diamide": 2,
+    "Butanediamide": 1,
+    "Phosphate": 1,
+    "Phosphoric_acid": 1,
+    "Phthalamic_acid": 1,
+    "Polyphenol": 1
+  },
+  "n_subtypes_present": 20,
+  "trend_classes": {
+    "Ascending": 40,
+    "Reverse": 27,
+    "Flat": 11,
+    "Mixed": 15,
+    "Peaked": 8,
+    "U_Shaped": 4,
+    "Insufficient_Data": 64
+  },
+  "trend_confidence": {
+    "High": 76,
+    "None": 64,
+    "Low": 15,
+    "Medium": 14
+  },
+  "n_ligands_with_fitted_slope": 105,
+  "slope_ci_width_dex_per_Z": {
+    "q1": 0.0452,
+    "median": 0.0833,
+    "q3": 0.1216
+  },
+  "ligands_by_condition_count": {
+    "1": 86,
+    "2-4": 25,
+    "5+": 58
+  },
+  "conditions_with_both": {
+    "Eu/La": 418,
+    "Nd/Pr": 341,
+    "Tb/Dy": 291,
+    "Er/Ho": 290,
+    "Yb/Lu": 268,
+    "Dy/Nd": 327
+  },
+  "n_distinct_conditions": 1805,
+  "trend_label_stability": {
+    "draws": 200,
+    "n_fitted": 105,
+    "label_kept_in_at_least_90pct": 71,
+    "label_kept_in_50_to_90pct": 24,
+    "label_kept_in_under_50pct": 10
+  },
+  "adjacent_pair_log_sf": {
+    "n_values": 3288,
+    "sign_undetermined_at_2_sigma": 1936
+  },
+  "n_merged_records": 19,
+  "identifier_coverage": {
+    "SMILES": 169,
+    "InChI_Key": 168,
+    "IUPAC_Name": 164,
+    "PubChem_CID": 116,
+    "CAS_Number": 36
+  },
+  "quality_grade": {
+    "Low": 86,
+    "Medium": 67,
+    "High": 16
+  },
+  "n_outlier_flags": 30,
+  "curved_trends_on_a_sharp_extremum": {
+    "threshold_dex": 0.5,
+    "Peaked": 2,
+    "U_Shaped": 2
+  },
+  "duplicated_condition_groups": 8,
+  "conditions_in_duplicated_groups": 17,
+  "ligands_in_duplicated_groups": 10,
+  "safe_conditions_without_concentrations": 0,
+  "by_subtype": {
+    "DGA": {
+      "n_ligands": 73,
+      "trend_classes": {
+        "Ascending": 25,
+        "Flat": 4,
+        "Mixed": 2,
+        "Peaked": 4,
+        "Insufficient_Data": 38
+      },
+      "no_trend_class": 38,
+      "median_lanthanides_measured": 1.0,
+      "median_conditions": 3.0,
+      "n_fitted": 35,
+      "fitted_class_kept_under_90pct": 5,
+      "n_ligands_with_adjacent_sf": 34,
+      "n_adjacent_sf": 1448,
+      "adjacent_sf_within_2_sigma": 838
+    },
+    "Phosphine_oxide": {
+      "n_ligands": 18,
+      "trend_classes": {
+        "Ascending": 10,
+        "Flat": 2,
+        "Mixed": 1,
+        "Peaked": 2,
+        "Insufficient_Data": 3
+      },
+      "no_trend_class": 3,
+      "median_lanthanides_measured": 6.0,
+      "median_conditions": 1.0,
+      "n_fitted": 15,
+      "fitted_class_kept_under_90pct": 11,
+      "n_ligands_with_adjacent_sf": 15,
+      "n_adjacent_sf": 93,
+      "adjacent_sf_within_2_sigma": 74
+    },
+    "DAPhen": {
+      "n_ligands": 13,
+      "trend_classes": {
+        "Reverse": 6,
+        "Flat": 1,
+        "Mixed": 2,
+        "Insufficient_Data": 4
+      },
+      "no_trend_class": 4,
+      "median_lanthanides_measured": 13.0,
+      "median_conditions": 1.0,
+      "n_fitted": 9,
+      "fitted_class_kept_under_90pct": 2,
+      "n_ligands_with_adjacent_sf": 9,
+      "n_adjacent_sf": 222,
+      "adjacent_sf_within_2_sigma": 91
+    },
+    "Malonamide": {
+      "n_ligands": 11,
+      "trend_classes": {
+        "Reverse": 4,
+        "Flat": 2,
+        "U_Shaped": 3,
+        "Insufficient_Data": 2
+      },
+      "no_trend_class": 2,
+      "median_lanthanides_measured": 9.0,
+      "median_conditions": 1.0,
+      "n_fitted": 9,
+      "fitted_class_kept_under_90pct": 5,
+      "n_ligands_with_adjacent_sf": 8,
+      "n_adjacent_sf": 73,
+      "adjacent_sf_within_2_sigma": 59
+    },
+    "Bipydiamide": {
+      "n_ligands": 8,
+      "trend_classes": {
+        "Ascending": 1,
+        "Reverse": 2,
+        "Flat": 2,
+        "Mixed": 2,
+        "Insufficient_Data": 1
+      },
+      "no_trend_class": 1,
+      "median_lanthanides_measured": 13.0,
+      "median_conditions": 1.0,
+      "n_fitted": 7,
+      "fitted_class_kept_under_90pct": 3,
+      "n_ligands_with_adjacent_sf": 7,
+      "n_adjacent_sf": 399,
+      "adjacent_sf_within_2_sigma": 269
+    },
+    "Multident_N_donor": {
+      "n_ligands": 8,
+      "trend_classes": {
+        "Ascending": 1,
+        "Mixed": 1,
+        "Peaked": 2,
+        "Insufficient_Data": 4
+      },
+      "no_trend_class": 4,
+      "median_lanthanides_measured": 7.0,
+      "median_conditions": 1.0,
+      "n_fitted": 4,
+      "fitted_class_kept_under_90pct": 1,
+      "n_ligands_with_adjacent_sf": 4,
+      "n_adjacent_sf": 170,
+      "adjacent_sf_within_2_sigma": 98
+    },
+    "MAPhen": {
+      "n_ligands": 6,
+      "trend_classes": {
+        "Reverse": 3,
+        "Mixed": 2,
+        "Insufficient_Data": 1
+      },
+      "no_trend_class": 1,
+      "median_lanthanides_measured": 14.0,
+      "median_conditions": 2.5,
+      "n_fitted": 5,
+      "fitted_class_kept_under_90pct": 2,
+      "n_ligands_with_adjacent_sf": 5,
+      "n_adjacent_sf": 203,
+      "adjacent_sf_within_2_sigma": 115
+    },
+    "Pyridinediamide": {
+      "n_ligands": 6,
+      "trend_classes": {
+        "Ascending": 2,
+        "Mixed": 3,
+        "Insufficient_Data": 1
+      },
+      "no_trend_class": 1,
+      "median_lanthanides_measured": 14.0,
+      "median_conditions": 6.0,
+      "n_fitted": 5,
+      "fitted_class_kept_under_90pct": 1,
+      "n_ligands_with_adjacent_sf": 5,
+      "n_adjacent_sf": 300,
+      "adjacent_sf_within_2_sigma": 173
+    },
+    "BLPhen": {
+      "n_ligands": 4,
+      "trend_classes": {
+        "Reverse": 4
+      },
+      "no_trend_class": 0,
+      "median_lanthanides_measured": 14.0,
+      "median_conditions": 2.0,
+      "n_fitted": 4,
+      "fitted_class_kept_under_90pct": 1,
+      "n_ligands_with_adjacent_sf": 4,
+      "n_adjacent_sf": 142,
+      "adjacent_sf_within_2_sigma": 42
+    },
+    "Crown_ether": {
+      "n_ligands": 4,
+      "trend_classes": {
+        "Reverse": 3,
+        "Insufficient_Data": 1
+      },
+      "no_trend_class": 1,
+      "median_lanthanides_measured": 4.5,
+      "median_conditions": 1.0,
+      "n_fitted": 3,
+      "fitted_class_kept_under_90pct": 0,
+      "n_ligands_with_adjacent_sf": 3,
+      "n_adjacent_sf": 5,
+      "adjacent_sf_within_2_sigma": 2
+    },
+    "Phosphonate": {
+      "n_ligands": 4,
+      "trend_classes": {
+        "Reverse": 2,
+        "Insufficient_Data": 2
+      },
+      "no_trend_class": 2,
+      "median_lanthanides_measured": 4.5,
+      "median_conditions": 3.0,
+      "n_fitted": 2,
+      "fitted_class_kept_under_90pct": 2,
+      "n_ligands_with_adjacent_sf": 2,
+      "n_adjacent_sf": 25,
+      "adjacent_sf_within_2_sigma": 19
+    },
+    "Tripodal-DGA": {
+      "n_ligands": 3,
+      "trend_classes": {
+        "Insufficient_Data": 3
+      },
+      "no_trend_class": 3,
+      "median_lanthanides_measured": 1.0,
+      "median_conditions": 15.0,
+      "n_fitted": 0,
+      "fitted_class_kept_under_90pct": 0,
+      "n_ligands_with_adjacent_sf": 0,
+      "n_adjacent_sf": 0,
+      "adjacent_sf_within_2_sigma": 0
+    },
+    "Amide": {
+      "n_ligands": 2,
+      "trend_classes": {
+        "U_Shaped": 1,
+        "Insufficient_Data": 1
+      },
+      "no_trend_class": 1,
+      "median_lanthanides_measured": 3.5,
+      "median_conditions": 6.0,
+      "n_fitted": 1,
+      "fitted_class_kept_under_90pct": 0,
+      "n_ligands_with_adjacent_sf": 1,
+      "n_adjacent_sf": 6,
+      "adjacent_sf_within_2_sigma": 1
+    },
+    "Nitrilotriacetamide": {
+      "n_ligands": 2,
+      "trend_classes": {
+        "Mixed": 1,
+        "Insufficient_Data": 1
+      },
+      "no_trend_class": 1,
+      "median_lanthanides_measured": 7.5,
+      "median_conditions": 11.5,
+      "n_fitted": 1,
+      "fitted_class_kept_under_90pct": 0,
+      "n_ligands_with_adjacent_sf": 1,
+      "n_adjacent_sf": 35,
+      "adjacent_sf_within_2_sigma": 28
+    },
+    "Polyether_Diamide": {
+      "n_ligands": 2,
+      "trend_classes": {
+        "Reverse": 2
+      },
+      "no_trend_class": 0,
+      "median_lanthanides_measured": 14.0,
+      "median_conditions": 8.5,
+      "n_fitted": 2,
+      "fitted_class_kept_under_90pct": 0,
+      "n_ligands_with_adjacent_sf": 2,
+      "n_adjacent_sf": 120,
+      "adjacent_sf_within_2_sigma": 94
+    },
+    "Butanediamide": {
+      "n_ligands": 1,
+      "trend_classes": {
+        "Reverse": 1
+      },
+      "no_trend_class": 0,
+      "median_lanthanides_measured": 4.0,
+      "median_conditions": 1.0,
+      "n_fitted": 1,
+      "fitted_class_kept_under_90pct": 1,
+      "n_ligands_with_adjacent_sf": 1,
+      "n_adjacent_sf": 2,
+      "adjacent_sf_within_2_sigma": 2
+    },
+    "Phosphate": {
+      "n_ligands": 1,
+      "trend_classes": {
+        "Mixed": 1
+      },
+      "no_trend_class": 0,
+      "median_lanthanides_measured": 13.0,
+      "median_conditions": 6.0,
+      "n_fitted": 1,
+      "fitted_class_kept_under_90pct": 0,
+      "n_ligands_with_adjacent_sf": 1,
+      "n_adjacent_sf": 37,
+      "adjacent_sf_within_2_sigma": 27
+    },
+    "Phosphoric_acid": {
+      "n_ligands": 1,
+      "trend_classes": {
+        "Ascending": 1
+      },
+      "no_trend_class": 0,
+      "median_lanthanides_measured": 10.0,
+      "median_conditions": 1.0,
+      "n_fitted": 1,
+      "fitted_class_kept_under_90pct": 0,
+      "n_ligands_with_adjacent_sf": 1,
+      "n_adjacent_sf": 8,
+      "adjacent_sf_within_2_sigma": 4
+    },
+    "Phthalamic_acid": {
+      "n_ligands": 1,
+      "trend_classes": {
+        "Insufficient_Data": 1
+      },
+      "no_trend_class": 1,
+      "median_lanthanides_measured": 2.0,
+      "median_conditions": 1.0,
+      "n_fitted": 0,
+      "fitted_class_kept_under_90pct": 0,
+      "n_ligands_with_adjacent_sf": 0,
+      "n_adjacent_sf": 0,
+      "adjacent_sf_within_2_sigma": 0
+    },
+    "Polyphenol": {
+      "n_ligands": 1,
+      "trend_classes": {
+        "Insufficient_Data": 1
+      },
+      "no_trend_class": 1,
+      "median_lanthanides_measured": 3.0,
+      "median_conditions": 1.0,
+      "n_fitted": 0,
+      "fitted_class_kept_under_90pct": 0,
+      "n_ligands_with_adjacent_sf": 0,
+      "n_adjacent_sf": 0,
+      "adjacent_sf_within_2_sigma": 0
+    }
+  },
+  "cell_provenance": {
+    "value_origin": {
+      "digitised": 4184,
+      "reported": 1539,
+      "unset": 388,
+      "censored": 317,
+      "derived": 35,
+      "interpolated": 18
+    },
+    "n_bounds": 317,
+    "n_measured_sigma": 1549,
+    "n_prior_sigma": 4615,
+    "n_mixture_conditions": 22
+  },
+  "verification": {
+    "n_entries": 2245,
+    "verdicts": {
+      "Correct": 1161,
+      "Wrong condition": 355,
+      "Duplicate - drop": 304,
+      "Not in paper": 139,
+      "Unsure": 117,
+      "Wrong value": 71,
+      "unset": 61,
+      "Wrong acid": 20,
+      "Wrong molecule": 17
+    },
+    "checked_by": {
+      "AI check": 1683,
+      "curator decision": 289,
+      "review page": 212,
+      "transcribed for curator review": 43,
+      "unset": 18
+    },
+    "actions": {
+      "keep": 1069,
+      "correct": 429,
+      "drop": 381,
+      "estimate": 137,
+      "recovered": 61,
+      "merged": 51,
+      "added": 43,
+      "untouched": 28,
+      "resolved": 22,
+      "move": 13,
+      "merge": 11
+    },
+    "accepted_by_decision_6": 172,
+    "estimates_answered": 137,
+    "estimates_accepted": 133,
+    "audit_answered": 30,
+    "audit_wrong": 0,
+    "audit_error_upper_95": 0.095
+  },
+  "cross_source_agreement": {
+    "strict": {
+      "same_paper": {
+        "n_cells": 1,
+        "n_ligands": 1,
+        "median_abs_dex": 0.007,
+        "p90_abs_dex": 0.007,
+        "max_abs_dex": 0.007,
+        "bland_altman_bias_dex": -0.007,
+        "bland_altman_loa_dex": null
+      },
+      "different_paper": {
+        "n_cells": 15,
+        "n_ligands": 2,
+        "median_abs_dex": 0.0032,
+        "p90_abs_dex": 0.0086,
+        "max_abs_dex": 0.0089,
+        "bland_altman_bias_dex": -0.0038,
+        "bland_altman_loa_dex": 0.0065
+      },
+      "all": {
+        "n_cells": 16,
+        "n_ligands": 3,
+        "median_abs_dex": 0.0034,
+        "p90_abs_dex": 0.0085,
+        "max_abs_dex": 0.0089,
+        "bland_altman_bias_dex": -0.004,
+        "bland_altman_loa_dex": 0.0065
+      }
+    },
+    "relaxed": {
+      "same_paper": {
+        "n_cells": 1,
+        "n_ligands": 1,
+        "median_abs_dex": 0.007,
+        "p90_abs_dex": 0.007,
+        "max_abs_dex": 0.007,
+        "bland_altman_bias_dex": -0.007,
+        "bland_altman_loa_dex": null
+      },
+      "different_paper": {
+        "n_cells": 49,
+        "n_ligands": 5,
+        "median_abs_dex": 0.023,
+        "p90_abs_dex": 0.085,
+        "max_abs_dex": 0.136,
+        "bland_altman_bias_dex": -0.0213,
+        "bland_altman_loa_dex": 0.0908
+      },
+      "all": {
+        "n_cells": 50,
+        "n_ligands": 6,
+        "median_abs_dex": 0.0195,
+        "p90_abs_dex": 0.085,
+        "max_abs_dex": 0.136,
+        "bland_altman_bias_dex": -0.021,
+        "bland_altman_loa_dex": 0.09
+      }
+    }
+  },
+  "sigma_priors": {
+    "figure_dex": 0.0715,
+    "table_dex": 0.0152,
+    "figure_pct_on_D": 16.46,
+    "table_pct_on_D": 3.5,
+    "figure_evidence": {
+      "n_cells": 1143,
+      "n_figures": 64,
+      "n_figures_calibrated": 70,
+      "n_floor_excluded": 288,
+      "median_dex": 0.0715,
+      "q1_dex": 0.0483,
+      "q3_dex": 0.0817
+    }
+  },
+  "eu_la_by_subtype": {
+    "DGA": {
+      "n_sf": 161,
+      "median_log_sf": 1.07,
+      "median_sf": 12.0,
+      "n_log_d_eu": 681,
+      "median_log_d_eu": 0.9,
+      "n_log_d_la": 232,
+      "median_log_d_la": -0.22
+    },
+    "Multident_N_donor": {
+      "n_sf": 6,
+      "median_log_sf": 1.0,
+      "median_sf": 10.0,
+      "n_log_d_eu": 31,
+      "median_log_d_eu": -1.4,
+      "n_log_d_la": 7,
+      "median_log_d_la": -3.0
+    },
+    "Phosphine_oxide": {
+      "n_sf": 18,
+      "median_log_sf": 0.42,
+      "median_sf": 2.6,
+      "n_log_d_eu": 31,
+      "median_log_d_eu": 0.46,
+      "n_log_d_la": 18,
+      "median_log_d_la": -0.08
+    },
+    "Pyridinediamide": {
+      "n_sf": 28,
+      "median_log_sf": 0.37,
+      "median_sf": 2.4,
+      "n_log_d_eu": 29,
+      "median_log_d_eu": 0.04,
+      "n_log_d_la": 29,
+      "median_log_d_la": 0.04
+    },
+    "Phosphonate": {
+      "n_sf": 11,
+      "median_log_sf": 0.3,
+      "median_sf": 2.0,
+      "n_log_d_eu": 14,
+      "median_log_d_eu": -0.6,
+      "n_log_d_la": 12,
+      "median_log_d_la": -0.91
+    },
+    "MAPhen": {
+      "n_sf": 17,
+      "median_log_sf": 0.1,
+      "median_sf": 1.2,
+      "n_log_d_eu": 18,
+      "median_log_d_eu": -1.61,
+      "n_log_d_la": 17,
+      "median_log_d_la": -1.71
+    },
+    "Bipydiamide": {
+      "n_sf": 33,
+      "median_log_sf": -0.12,
+      "median_sf": 0.77,
+      "n_log_d_eu": 35,
+      "median_log_d_eu": -0.49,
+      "n_log_d_la": 35,
+      "median_log_d_la": -0.43
+    },
+    "Malonamide": {
+      "n_sf": 15,
+      "median_log_sf": -0.19,
+      "median_sf": 0.65,
+      "n_log_d_eu": 53,
+      "median_log_d_eu": -0.06,
+      "n_log_d_la": 16,
+      "median_log_d_la": 0.5
+    },
+    "Polyether_Diamide": {
+      "n_sf": 14,
+      "median_log_sf": -0.51,
+      "median_sf": 0.31,
+      "n_log_d_eu": 15,
+      "median_log_d_eu": 0.15,
+      "n_log_d_la": 16,
+      "median_log_d_la": 1.14
+    },
+    "Nitrilotriacetamide": {
+      "n_sf": 11,
+      "median_log_sf": -0.95,
+      "median_sf": 0.11,
+      "n_log_d_eu": 23,
+      "median_log_d_eu": -1.16,
+      "n_log_d_la": 11,
+      "median_log_d_la": 0.08
+    },
+    "BLPhen": {
+      "n_sf": 12,
+      "median_log_sf": -1.26,
+      "median_sf": 0.056,
+      "n_log_d_eu": 12,
+      "median_log_d_eu": -0.43,
+      "n_log_d_la": 12,
+      "median_log_d_la": 0.9
+    },
+    "DAPhen": {
+      "n_sf": 20,
+      "median_log_sf": -1.39,
+      "median_sf": 0.041,
+      "n_log_d_eu": 23,
+      "median_log_d_eu": -1.4,
+      "n_log_d_la": 22,
+      "median_log_d_la": 0.09
+    }
+  },
+  "table_prior_sensitivity": {
+    "factor": 2,
+    "table_pct_on_D": 7.0,
+    "n_values": 1093,
+    "trend_label_stability": {
+      "draws": 200,
+      "n_fitted": 105,
+      "label_kept_in_at_least_90pct": 71,
+      "label_kept_in_50_to_90pct": 24,
+      "label_kept_in_under_50pct": 10
+    },
+    "ligands_crossing_90pct": 0,
+    "adjacent_pair_log_sf": {
+      "n_values": 3288,
+      "sign_undetermined_at_2_sigma": 2075
+    }
+  },
+  "reported_sigma": {
+    "n_values": 61,
+    "dois": [
+      "10.1080/07366299.2012.757160",
+      "10.1080/07366299.2017.1326761"
+    ],
+    "median_pct_on_D": 5.0
+  },
+  "pair_log_sf": {
+    "by_separation": {
+      "1": {
+        "n_values": 3288,
+        "within_2_sigma": 1936
+      },
+      "2": {
+        "n_values": 3137,
+        "within_2_sigma": 1237
+      },
+      "3": {
+        "n_values": 2786,
+        "within_2_sigma": 816
+      },
+      "4": {
+        "n_values": 2469,
+        "within_2_sigma": 542
+      },
+      "5": {
+        "n_values": 2358,
+        "within_2_sigma": 371
+      },
+      "6": {
+        "n_values": 2173,
+        "within_2_sigma": 287
+      },
+      "7": {
+        "n_values": 1745,
+        "within_2_sigma": 204
+      },
+      "8": {
+        "n_values": 1518,
+        "within_2_sigma": 146
+      },
+      "9": {
+        "n_values": 1192,
+        "within_2_sigma": 96
+      },
+      "10": {
+        "n_values": 920,
+        "within_2_sigma": 75
+      },
+      "11": {
+        "n_values": 936,
+        "within_2_sigma": 66
+      },
+      "12": {
+        "n_values": 666,
+        "within_2_sigma": 56
+      },
+      "13": {
+        "n_values": 468,
+        "within_2_sigma": 43
+      },
+      "14": {
+        "n_values": 263,
+        "within_2_sigma": 23
+      }
+    },
+    "Eu/La": {
+      "n_values": 356,
+      "within_2_sigma": 45
+    }
+  }
+}

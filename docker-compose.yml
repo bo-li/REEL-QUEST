@@ -1,0 +1,34 @@
+version: "3.9"
+
+# REL-QUEST Dashboard
+#
+# Connects to an existing Ollama instance started by a separate compose project
+# ("llm-server") via its shared Docker network (llm-server_default).
+#
+# Usage:
+#   docker compose up -d
+#
+# Access: http://localhost:8501  (or via SSH tunnel from your laptop)
+
+services:
+  relquest-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: relquest-dashboard
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      # Reach Ollama by container name via the shared Docker network
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - RELQUEST_LLM_MODEL=qwen2.5:7b
+    networks:
+      - llm-server_default
+    command: streamlit run app.py --server.address=0.0.0.0 --server.port=8501
+
+networks:
+  llm-server_default:
+    external: true   # created by the llm-server compose project
